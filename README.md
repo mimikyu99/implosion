@@ -6,5 +6,4 @@
 </div>
 
 # Implosion
-A mindustry mod,that adds a brand new planet: **europa** one of the seven moon of Jupiter
-__
+A mindustry mod,that adds a brand new planet: **europa** one of the seven moon of Jupiter,also whit a brand new tech tree.
