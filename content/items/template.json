@@ -1,0 +1,7 @@
+{
+	"type": "material",
+	"name": "name",
+	"description": "desc",
+	"color": "hex color",
+	"hardness": 1
+}
