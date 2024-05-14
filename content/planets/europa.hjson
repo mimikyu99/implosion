@@ -52,19 +52,4 @@ mesh: [
     cscl: 1
     cthresh: 4
   }
-{
-    type: NoiseMesh
-    divisions: 6
-    radius: 0.94
-    color1: 9aa8e6
-    color2: 71b3d9
-    octaves: 1.2
-    persistence: 0.0001
-    scale: 0.0001
-    mag: 1.04
-    coct: 1
-    cper: 1
-    cscl: 1
-    cthresh: 4
-  }
 ]
