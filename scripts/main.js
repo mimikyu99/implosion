@@ -1,1 +1,1 @@
-console.log("MOD LOADED")
+Log.info("Implosion mod started...")
