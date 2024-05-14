@@ -1,4 +1,2 @@
-{
-  "type": Floor,
-  "variants" : 3
-}
+type: Floor
+variants: 3
