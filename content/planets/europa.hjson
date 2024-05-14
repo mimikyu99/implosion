@@ -1,0 +1,55 @@
+generator: {
+  berylChance: 0.45
+  iceChance: 0.15
+  ferricChance: 0.55
+  stoneChance: 2
+  radMin: 1500
+  radMax: 1500
+  berylliumScale: 4
+  copperScale: 0.6
+  scale: 25
+  mag: 0.5
+  thresh: 0.9
+  fscl: 30
+  fper: 0.4
+}
+sectorSize: 3.1
+sectorSeed: -4
+startSector: 23
+parent: sun
+iconColor: 63ad7a
+atmosphereRadIn: 0
+atmosphereRadOut: 0.35
+atmosphereColor: 3898a1
+orbitRadius: 32
+orbitOffset: 140
+orbitTime: 12000
+rotateTime: 5000
+accessible: true
+alwaysUnlocked: true
+defaultEnv: 129
+allowLaunchSchematics: false
+allowLaunchLoadout: false
+allowWaveSimulation: false
+allowSectorInvasion: false
+clearSectorOnLose: false
+prebuildBase: true
+allowWaves: false
+enemyBuildSpeedMultiplier: 1
+mesh: [
+  {
+    type: NoiseMesh
+    divisions: 5
+    radius: 0.94
+    color1: 219ebc
+    color2: 023047
+    octaves: 1
+    persistence: 0.0001
+    scale: 0.0001
+    mag: 1
+    coct: 1
+    cper: 1
+    cscl: 1
+    cthresh: 4
+  }
+]
