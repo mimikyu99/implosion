@@ -1,4 +1,2 @@
-{
-  "type": "StaticWall",
-  "variants": "4"
-}
+type: StaticWall
+variants: 4
