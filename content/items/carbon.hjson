@@ -1,0 +1,6 @@
+name:"Carbon"
+  description: "Useful material found in Europa. Can be crafted into Carbon Fiber"
+hardness: 1.5
+  cost:1.5
+  alwaysUnlocked:true
+  color: 424242
