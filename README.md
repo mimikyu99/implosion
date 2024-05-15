@@ -7,3 +7,8 @@
 
 # Implosion
 A mindustry mod,that adds a brand new planet: **europa** one of the seven moon of Jupiter,also whit a brand new tech tree.
+
+
+# Socials
+you can see our [trello](https://trello.com/invite/b/lZ9qBqhg/ATTI6391bef7ad11ff64bfad07c7489ed8424C563CD3/implosion)
+or contact us on discord: orange0330. and norax.2
