@@ -31,7 +31,7 @@ parent:core-crab
   requirements:[
 carbon/150
   silver/90
-  carbon-fabric/160
+  carbon-fiber/160
   ]
   }
 targetGround:true
