@@ -8,7 +8,7 @@ isFirstTier: true
 size: 3
 squareSprite: false
 alwaysUnlocked: true
-unitType: alpha
+unitType: dromiacea
 health: 1450
 itemCapacity: 3000
 unitCapModifier: 8
