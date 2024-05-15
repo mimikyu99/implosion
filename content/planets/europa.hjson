@@ -53,3 +53,7 @@ mesh: [
     cthresh: 4
   }
 ]
+
+itemWhitelist: [
+  sand, silver, carbon
+]
