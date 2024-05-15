@@ -1,4 +1,4 @@
-type: Drill
+type: BurstDrill
 name: Silver Drill
 description: Uses small silver blades to mine basic materials from the ground.
 size: 2
