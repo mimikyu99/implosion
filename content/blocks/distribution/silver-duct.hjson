@@ -1,0 +1,18 @@
+type: Duct
+name: Cadmium Duct
+description: Transports items.
+category: distribution
+alwaysUnlocked: false
+
+research: core-crab
+
+researchCost: [
+  silver/10
+]
+
+speed: 5.6
+health: 45
+requirements: [
+  silver/1
+]
+size:1
