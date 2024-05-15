@@ -7,7 +7,7 @@ health: 135
 armor: 1
 mineFloor: true
 mineWalls: true
-speed: 5
+speed: 1.5
 hitSize: 6
 isEnemy: false
 mineSpeed: 5
@@ -24,7 +24,7 @@ outlineColor: 42413e
 weapons: [
   {
         name: dromagun
-    x: -1
+    x: -2
     y: 1
     reload: 15
     mirror: true
