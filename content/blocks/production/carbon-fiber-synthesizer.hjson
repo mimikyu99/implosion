@@ -1,0 +1,23 @@
+type: GenericCrafter
+name: Carbon Fiber Synthesizer
+description: Weaves Carbon and Sand together to make Carbon Fiber.
+size: 3
+squareSprite: false
+craftTime: 9
+consumes: {
+  items: [
+    carbon/2
+    sand/1
+    ]
+}
+outputItem: carbon-fiber/1
+category: crafting
+researchCostMultiplier: 0.5
+research: core-crab
+requirements: [
+  carbon/160
+  silver/70
+]
+ambientSound: hum
+ambientSoundVolume: 0.12
+itemCapacity: 20
