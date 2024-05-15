@@ -7,13 +7,13 @@ health: 135
 armor: 1
 mineFloor: true
 mineWalls: true
-speed: 1.5
+speed: 2.5
 hitSize: 6
 isEnemy: false
 mineSpeed: 5
 mineTier: 1
 buildSpeed: 1
-drag: 0.5
+drag: 0.07
 itemCapacity: 20
 alwaysUnlocked: true
 outlineColor: 42413e
