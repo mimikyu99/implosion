@@ -1,0 +1,23 @@
+type: Drill
+name: Silver Drill
+description: Uses small silver blades to mine basic materials from the ground.
+size: 2
+category: production
+hasLiquids: false
+research: {
+  parent: core-crab
+requirements:[
+silver/15
+]
+    }
+hardnessDrillMultiplier: 50
+drillTime: 350
+hasPower: false
+tier: 1
+shake: 0.5
+itemCapacity: 20
+researchCostMultiplier: 0.5
+requirements: [
+  silver/12
+]
+squareSprite: false
