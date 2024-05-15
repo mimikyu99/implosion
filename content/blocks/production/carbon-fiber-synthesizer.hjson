@@ -3,7 +3,7 @@ name: Carbon Fiber Synthesizer
 description: Weaves Carbon and Sand together to make Carbon Fiber.
 size: 3
 squareSprite: false
-craftTime: 9
+craftTime: 14
 consumes: {
   items: [
     carbon/2
