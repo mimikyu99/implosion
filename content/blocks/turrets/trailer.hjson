@@ -1,6 +1,6 @@
 type: "ItemTurret"
   name: "Trailer"
-  description:"Fires alternating Carbon bullets."
+  description:"Fires alternating Silver bullets. Can shoot flames with flammable ammo."
  size: 2
 health: 800
   reload: 55
@@ -19,7 +19,7 @@ coolant:{
 type:"ConsumeCoolant"
   allowGas:true
 allowLiquid:true
-  amount:1
+  amount:0.3
   }
 inaccuracy:0
   range:120
@@ -37,7 +37,7 @@ carbon/150
 targetGround:true
   targetAir:true
   ammoTypes:{
-carbon:{
+silver:{
 bulletType:"BasicBulletType"
   width:9
   height:13
@@ -49,6 +49,20 @@ knockback: 0
   ammoMultiplier:1
   damage:20
 }
+  carbon: {
+    ammoMultiplier: 5
+    type: ContinuousFlameBulletType
+    lifetime: 20
+    drawFlare: false
+    hitColor: ffc9a2
+    damage: 8
+    knockback: 0.1
+    pierce: true
+    pierceArmor: false
+    length: 80
+    width: 1.5
+    colors: [e99558, f3ad7a, ffc9a2, ffdfc7, ffffff]
+  }
 }
 base: trailer-base
    
