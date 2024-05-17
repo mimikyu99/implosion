@@ -1,7 +1,10 @@
-localizedName: Silver Wall Large
+localizedName: Large Silver Wall 
+
 size: 2
 health: 1340
+
 category: defense
+type: Wall
 
 requirements: [
   silver/24
