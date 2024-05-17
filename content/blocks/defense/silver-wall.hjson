@@ -1,15 +1,19 @@
+localizedName: Silver Wall 
 size: 1
-health: 335
-
-localizedName: Silver wall 
-type: Walls
+health: 354
 category: defense
 
 requirements: [
-    silver/6
-]
-researchCost: [
+  silver/6
+  ]
+
+
+  research: {
+  parent: core-crab
+    planet: europa
+    requirements: [
     silver/30
-]
-  
-research: core-crab
+    ]
+}
+
+envEnabled: 4
