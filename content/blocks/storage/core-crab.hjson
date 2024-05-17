@@ -1,6 +1,7 @@
 type: CoreBlock
 name: Core: Crab
 description: Core of the base. Armored and stores a medium amount of items.
+squareSprite: false
 requirements: [
   copper/1
 ]
