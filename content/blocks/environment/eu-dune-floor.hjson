@@ -1,4 +1,5 @@
 type: Floor
-localizedName: Europa Sand
+localizedName: Dune
 variants: 1
 itemDrop: sand
+playerUnmineable: true
