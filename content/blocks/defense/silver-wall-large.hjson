@@ -12,8 +12,6 @@ requirements: [
   parent: silver-wall
     planet: europa
     requirements: [
-    duralumin/240
+    silver/240
     ]
 }
-
-envEnabled: 4
