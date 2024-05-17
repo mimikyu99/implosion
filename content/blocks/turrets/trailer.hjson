@@ -1,60 +1,56 @@
 type: "ItemTurret"
-  name: "Trailer"
-  description:"Fires alternating Silver bullets. Can shoot flames with flammable ammo."
- size: 2
+name: "Trailer"
+description: "Fires alternating Silver bullets. Can shoot flames with flammable ammo."
+size: 2
 health: 800
-  reload: 55
-recoil:5
-  requirements:[
-carbon/50
+reload: 55
+recoil: 5
+requirements: [
+  carbon/50
   silver/25
 ]
-  shoot:{
-   type: ShootAlternate
-   shots: 1
-   spread: 4
-   shotDelay: 1
+shoot: {
+  type: "ShootAlternate"
+  shots: 1
+  spread: 4
+  shotDelay: 1
 }
-
-coolant:{
-type:"ConsumeCoolant"
-  allowGas:true
-allowLiquid:true
-  amount:0.3
-  }
-
-inaccuracy:0
-  range:120
-  category:"turret"
-shootSound: shoot
-outlineColor:"42413e"
-  research:{
-parent:core-crab
-  requirements:[
-carbon/150
-  silver/90
-  carbon-fiber/160
+coolant: {
+  type: "ConsumeCoolant"
+  allowGas: true
+  allowLiquid: true
+  amount: 0.3
+}
+inaccuracy: 0
+range: 120
+category: "turret"
+shootSound: "shoot"
+outlineColor: "42413e"
+research: {
+  parent: "core-crab"
+  requirements: [
+    carbon/150
+    silver/90
+    carbon-fiber/160
   ]
+}
+targetGround: true
+targetAir: true
+ammoTypes: {
+  silver: {
+    bulletType: "BasicBulletType"
+    width: 9
+    height: 13
+    sprite: "silver-bullet"
+    speed: 4.5
+    knockback: 0
+    lifeTime: 98
+    collidesGround: true
+    collidesAir: true
+    ammoMultiplier: 1
+    damage: 20
   }
-targetGround:true
-  targetAir:true
-  ammoTypes:{
-
-silver:{
-bulletType:"BasicBulletType"
-  width:9
-  height:13
-  speed:4.5
-  knockback: 0
-  sprite: silver-bullet
-  lifeTime:98
-  collidesGround:true
-  collidesAir:true
-  ammoMultiplier:1
-  damage:20
-
 }
+base: "trailer-base"
 
-}
-base: trailer-base
    
