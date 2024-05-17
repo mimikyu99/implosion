@@ -1,6 +1,10 @@
 size: 1
 health: 335
 
+localizedName: Silver wall 
+type: Walls
+category: defense
+
 requirements: [
     silver/6
 ]
