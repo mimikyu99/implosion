@@ -1,17 +1,15 @@
-localizedName: Silver Wall 
-size: 1
-health: 354
-category: defense
-
-requirements: [
-  silver/6
-  ]
-
-
-  research: {
-  parent: core-crab
-    planet: europa
-    requirements: [
-    silver/30
-    ]
+name:Large Silver Wall
+  description:Made of tightly packed silver.
+  size: 1
+  health: 354
+requirements:[
+silver/24
+]
+  research:{
+parent:core-crab
+requirements:[
+silver/30
+]
 }
+category: defense
+type: Wall
