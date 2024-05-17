@@ -1,2 +1,2 @@
 Log.info("Implosion mod started...")
-require("multi-crafter");
+require("multi-crafter/lib.js");
