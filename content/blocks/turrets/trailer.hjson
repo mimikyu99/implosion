@@ -15,12 +15,14 @@ carbon/50
    spread: 4
    shotDelay: 1
 }
+
 coolant:{
 type:"ConsumeCoolant"
   allowGas:true
 allowLiquid:true
   amount:0.3
   }
+
 inaccuracy:0
   range:120
   category:"turret"
@@ -37,19 +39,22 @@ carbon/150
 targetGround:true
   targetAir:true
   ammoTypes:{
+
 silver:{
 bulletType:"BasicBulletType"
   width:9
   height:13
   speed:4.5
-knockback: 0
+  knockback: 0
+  sprite: silver-bullet
   lifeTime:98
   collidesGround:true
   collidesAir:true
   ammoMultiplier:1
   damage:20
-sprite: silver-bullet
+
 }
+
 }
 base: trailer-base
    
