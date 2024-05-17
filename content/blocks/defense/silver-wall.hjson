@@ -15,5 +15,3 @@ requirements: [
     silver/30
     ]
 }
-
-envEnabled: 4
