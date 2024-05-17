@@ -41,7 +41,7 @@ ammoTypes: {
     bulletType: "BasicBulletType"
     width: 9
     height: 13
-    sprite: "silver-bullet"
+    sprite: "implosion-silver-bullet"
     speed: 4.5
     knockback: 0
     lifeTime: 98
