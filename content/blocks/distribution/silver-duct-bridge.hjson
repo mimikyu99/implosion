@@ -1,0 +1,15 @@
+type: DuctBridge
+name: Silver Bridge
+description: Acts as a bridge for crossing pipelines or terrain.
+health: 135
+size: 1
+requirements: [
+silver/5
+  carbon/2
+] 
+category: distribution
+research: silver-duct
+squareSprite: false
+range: 4
+speed: 4.285714
+researchCostMultiplier: 0.5
