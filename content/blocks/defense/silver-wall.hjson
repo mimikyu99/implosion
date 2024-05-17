@@ -1,0 +1,11 @@
+size: 1
+health: 335
+
+requirements: [
+    silver/6
+]
+researchCost: [
+    silver/30
+]
+  
+research: core-crab
