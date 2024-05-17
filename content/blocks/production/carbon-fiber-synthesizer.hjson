@@ -2,6 +2,7 @@ type: GenericCrafter
 name: Carbon Fiber Synthesizer
 description: Weaves Carbon and Sand together to make Carbon Fiber.
 size: 3
+craftEffect: producesmoke
 squareSprite: false
 craftTime: 14
 consumes: {
