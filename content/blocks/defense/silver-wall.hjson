@@ -12,7 +12,7 @@ requirements: [
 
 
   research: {
-  parent: silver-wall
+  parent: core-crab
     planet: europa
     requirements: [
     silver/50
