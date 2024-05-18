@@ -4,7 +4,7 @@ Events.on(ClientLoadEvent, (event) => {
         (res) => {
             var resp = res.getResultAsString();
             var json = Jval.read(resp);
-            var vers = Vars.mods.getMod("aquarion").meta.version;
+            var vers = Vars.mods.getMod("implosion").meta.version;
 
             Log.info("found mod version:" + json.get("version"));
             if (!vers.equals(json.get("version"))) {
