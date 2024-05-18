@@ -1,13 +1,23 @@
-Events.on(ClientLoadEvent, (event) => {
-    var req = new Http.get(
-        "https://raw.githubusercontent.com/0rang30rang3/implosion/main/mod.hjson",
-        (res) => {
-            var resp = res.getResultAsString();
-            var json = Jval.read(resp);
-            var vers = Vars.mods.getMod("implosion").meta.version;
-            Log.info("found mod version:" + json.get("version"));
+// Define variables
+var req, res, resp, json, vers, modName, modRepo, hjsonUrl, localVersion, repoVersion;
 
-            if (!vers.equals(json.get("version"))) {
+
+modName = "implosion";
+modRepo = Vars.mods.locateMod(modName).getRepo();
+hjsonUrl = "https://raw.githubusercontent.com/0rang30rang3/implosion/main/mod.hjson";
+
+Events.on(ClientLoadEvent, (event) => {
+    localVersion = Vars.mods.getMod(modName).meta.version;
+    Log.info("Local mod version: " + localVersion);
+    req = new Http.get(
+        hjsonUrl,
+        (res) => {
+            resp = res.getResultAsString();
+            json = Jval.read(resp);
+            repoVersion = json.get("version");
+            Log.info("Repository mod version: " + repoVersion);
+
+            if (!localVersion.equals(repoVersion)) {
                 try {
                     Vars.ui.showMenu(
                         "TEST",
@@ -18,9 +28,7 @@ Events.on(ClientLoadEvent, (event) => {
                         ],
                         (option) => {
                             if (option == 1) {
-                                Vars.ui.mods.githubImportMod(
-                                    Vars.mods.locateMod("implosion").getRepo()
-                                );
+                                Vars.ui.mods.githubImportMod(modRepo);
 
                                 var shown = false;
                                 Timer.schedule(
