@@ -1,6 +1,6 @@
 type: flying
 hovering: true
-groundLayer: 90
+groundLayer: 200
 name: Dromiacea
 description: Defends the Crab core. Builds structures and mines ores.
 health: 135
@@ -13,7 +13,7 @@ isEnemy: false
 mineSpeed: 5
 mineTier: 1
 buildSpeed: 1
-drag: 0.07
+drag: 0.01
 itemCapacity: 20
 alwaysUnlocked: true
 outlineColor: 42413e
@@ -25,7 +25,7 @@ weapons: [
   {
         name: dromagun
     x: -2
-    y: 1
+    y: 2
     reload: 15
     mirror: true
     rotate: true
