@@ -23,12 +23,19 @@ jobs:
           MAJOR=${VERSION_PARTS[0]}
           MINOR=${VERSION_PARTS[1]}
           PATCH=${VERSION_PARTS[2]}
-          if [ "$PATCH" -lt 9 ]; then
-            PATCH=$((PATCH + 1))
-          else
-            PATCH=0
-            MINOR=$((MINOR + 1))
-          fi
+
+          while true; do
+            if ! git rev-parse --quiet --verify "v$MAJOR.$MINOR.$PATCH" >/dev/null; then
+              break
+            fi
+            if [ "$PATCH" -lt 9 ]; then
+              PATCH=$((PATCH + 1))
+            else
+              PATCH=0
+              MINOR=$((MINOR + 1))
+            fi
+          done
+
           echo "VERSION=$MAJOR.$MINOR.$PATCH" >> $GITHUB_ENV
 
       - name: Create Release
