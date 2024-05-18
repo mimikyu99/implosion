@@ -8,76 +8,77 @@ jobs:
   publish_release:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Get the latest tag
-      id: get_latest_tag
-      run: echo "LATEST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+      - name: Get the latest tag
+        id: get_latest_tag
+        run: echo "LATEST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
-    - name: Generate version number
-      id: version
-      run: |
-        LATEST_TAG=${LATEST_TAG:-'0.0.0'}
-        IFS='.' read -r -a VERSION_PARTS <<< "$LATEST_TAG"
-        MAJOR=${VERSION_PARTS[0]}
-        MINOR=${VERSION_PARTS[1]}
-        PATCH=${VERSION_PARTS[2]}
+      - name: Generate version number
+        id: version
+        run: |
+          LATEST_TAG=${LATEST_TAG:-'0.0.0'}
+          IFS='.' read -r -a VERSION_PARTS <<< "$LATEST_TAG"
+          MAJOR=${VERSION_PARTS[0]}
+          MINOR=${VERSION_PARTS[1]}
+          PATCH=${VERSION_PARTS[2]}
+          if [ "$PATCH" -lt 9 ]; then
+            PATCH=$((PATCH + 1))
+          else
+            PATCH=0
+            MINOR=$((MINOR + 1))
+          fi
+          echo "VERSION=$MAJOR.$MINOR.$PATCH" >> $GITHUB_ENV
 
-        if [ "$PATCH" -lt 9 ]; then
-          PATCH=$((PATCH + 1))
-        else
-          PATCH=0
-          MINOR=$((MINOR + 1))
-        fi
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.VERSION }}
+          release_name: Release ${{ env.VERSION }}
+          body: |
+            Changes in this release:
+            ...
+          draft: false
+          prerelease: false
 
-        NEW_TAG="$MAJOR.$MINOR.$PATCH"
-        if git rev-parse "refs/tags/$NEW_TAG" >/dev/null 2>&1; then
-          PATCH=$((PATCH + 1))
-          NEW_TAG="$MAJOR.$MINOR.$PATCH"
-        fi
+      - name: Delete old releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh_api_url="https://api.github.com/repos/${{ github.repository }}/releases"
+          releases=$(curl -s "$gh_api_url" | jq -r '.[]')
 
-        echo "VERSION=$NEW_TAG" >> $GITHUB_ENV
+          current_release_id=$(echo "$releases" | jq -r '.id' | head -n 1)
+          release_count=1
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ env.VERSION }}
-        release_name: Release ${{ env.VERSION }}
-        body: |
-        draft: false
-        prerelease: false
-
-    - name: Delete old releases
-      run: |
-        # Get the list of releases
-        releases=$(gh api repos/${{ github.repository }}/releases --paginate --jq '.[] | {id: .id, tag_name: .tag_name} | @base64')
-
-        # Decode the base64 encoded releases list
-        decode() { echo "$1" | base64 --decode; }
-
-        # Collect release IDs and tags
-        ids=()
-        tags=()
-        for release in $releases; do
-          release_decoded=$(decode "$release")
-          id=$(echo $release_decoded | jq -r '.id')
-          tag_name=$(echo $release_decoded | jq -r '.tag_name')
-          ids+=($id)
-          tags+=($tag_name)
-        done
-
-        # Calculate the threshold index
-        threshold_index=$(( ${#ids[@]} - 30 ))
-
-        # Delete releases older than the threshold
-        if [ $threshold_index -gt 0 ]; then
-          for (( i=0; i<$threshold_index; i++ )); do
-            gh api repos/${{ github.repository }}/releases/${ids[$i]} -X DELETE
+          for release in $releases; do
+            release_id=$(echo "$release" | jq -r '.id')
+            if [ "$release_id" != "$current_release_id" ]; then
+              release_count=$((release_count + 1))
+              if [ "$release_count" -gt 30 ]; then
+                echo "Deleting release $release_id"
+                curl -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" "$gh_api_url/$release_id"
+                curl -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" "$gh_api_url/$release_id/assets"
+              fi
+            fi
           done
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove release comments
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh_api_url="https://api.github.com/repos/${{ github.repository }}/releases"
+          releases=$(curl -s "$gh_api_url" | jq -r '.[]')
+
+          for release in $releases; do
+            release_id=$(echo "$release" | jq -r '.id')
+            comments=$(curl -s "$gh_api_url/$release_id/comments" | jq -r '.[].id')
+            for comment_id in $comments; do
+              echo "Deleting comment $comment_id"
+              curl -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" "$gh_api_url/$release_id/comments/$comment_id"
+            done
+          done
