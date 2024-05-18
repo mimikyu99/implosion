@@ -20,5 +20,6 @@ requirements: [
   silver/70
 ]
 ambientSound: hum
+loopSound": hum
 ambientSoundVolume: 1
 itemCapacity: 20
