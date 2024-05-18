@@ -5,14 +5,17 @@ Events.on(ClientLoadEvent, (event) => {
             var resp = res.getResultAsString();
             var json = Jval.read(resp);
             var vers = Vars.mods.getMod("implosion").meta.version;
-
             Log.info("found mod version:" + json.get("version"));
+
             if (!vers.equals(json.get("version"))) {
                 try {
                     Vars.ui.showMenu(
                         "TEST",
-                        "TEXT GOES HERE"
-                        [["[red]Ok"], ["[green]Update"]],
+                        "TEXT GOES HERE",
+                        [
+                            ["[red]Ok"],
+                            ["[green]Update"]
+                        ],
                         (option) => {
                             if (option == 1) {
                                 Vars.ui.mods.githubImportMod(
@@ -20,13 +23,9 @@ Events.on(ClientLoadEvent, (event) => {
                                 );
 
                                 var shown = false;
-
                                 Timer.schedule(
                                     () => {
-                                        if (
-                                            Vars.mods.requiresReload() &&
-                                            !shown
-                                        ) {
+                                        if (Vars.mods.requiresReload() && !shown) {
                                             shown = true;
                                             Vars.ui.showInfoOnHidden(
                                                 "@mods.reloadexit",
@@ -46,6 +45,6 @@ Events.on(ClientLoadEvent, (event) => {
                     Log.info("Error: " + err.toString());
                 }
             }
-        },
+        }
     );
 });
