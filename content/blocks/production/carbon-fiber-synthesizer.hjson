@@ -2,7 +2,7 @@ type: GenericCrafter
 name: Carbon Fiber Synthesizer
 description: Weaves Carbon and Sand together to make Carbon Fiber.
 size: 3
-craftEffect: producesmoke
+craftEffect: "producesmoke"
 squareSprite: false
 craftTime: 14
 consumes: {
@@ -19,8 +19,8 @@ requirements: [
   carbon/160
   silver/70
 ]
-ambientSound: spellLoop
-loopSound: spellLoop
+ambientSound: "spellLoop"
+loopSound: "spellLoop"
 ambientSoundVolume: 15
 loopSoundVolume: 15
 itemCapacity: 20
