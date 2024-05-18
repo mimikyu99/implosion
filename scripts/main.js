@@ -1,2 +1,2 @@
 Log.info("Implosion mod started...")
-require("update.js")
+require("update")
