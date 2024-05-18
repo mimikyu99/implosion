@@ -1,5 +1,4 @@
 Events.on(ClientLoadEvent, (event) => {
-    Log.info("Aquarion - Sending version check");
     var req = new Http.get(
         "https://raw.githubusercontent.com/0rang30rang3/implosion/mod.hjson",
         (res) => {
