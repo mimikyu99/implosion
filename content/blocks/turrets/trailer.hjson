@@ -39,8 +39,8 @@ targetAir: true
 ammoTypes: {
   silver: {
     bulletType: "BasicBulletType"
-    width: 15
-    height: 13
+    width: 30
+    height: 17
     sprite: "implosion-silver-bullet"
     speed: 4.5
     knockback: 0
