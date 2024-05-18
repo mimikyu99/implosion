@@ -31,7 +31,13 @@ jobs:
           MINOR=$((MINOR + 1))
         fi
 
-        echo "VERSION=$MAJOR.$MINOR.$PATCH" >> $GITHUB_ENV
+        NEW_TAG="$MAJOR.$MINOR.$PATCH"
+        if git rev-parse "refs/tags/$NEW_TAG" >/dev/null 2>&1; then
+          PATCH=$((PATCH + 1))
+          NEW_TAG="$MAJOR.$MINOR.$PATCH"
+        fi
+
+        echo "VERSION=$NEW_TAG" >> $GITHUB_ENV
 
     - name: Create Release
       id: create_release
