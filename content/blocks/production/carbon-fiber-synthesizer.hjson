@@ -20,5 +20,5 @@ requirements: [
   silver/70
 ]
 ambientSound: hum
-ambientSoundVolume: 0.12
+ambientSoundVolume: 1
 itemCapacity: 20
