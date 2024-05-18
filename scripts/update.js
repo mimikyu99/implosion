@@ -1,6 +1,6 @@
 Events.on(ClientLoadEvent, (event) => {
     var req = new Http.get(
-        "https://raw.githubusercontent.com/0rang30rang3/implosion/mod.hjson",
+        "https://raw.githubusercontent.com/0rang30rang3/implosion/main/mod.hjson",
         (res) => {
             var resp = res.getResultAsString();
             var json = Jval.read(resp);
