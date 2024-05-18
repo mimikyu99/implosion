@@ -44,3 +44,34 @@ jobs:
         body: |
         draft: false
         prerelease: false
+
+    - name: Delete old releases
+      run: |
+        # Get the list of releases
+        releases=$(gh api repos/${{ github.repository }}/releases --paginate --jq '.[] | {id: .id, tag_name: .tag_name} | @base64')
+
+        # Decode the base64 encoded releases list
+        decode() { echo "$1" | base64 --decode; }
+
+        # Collect release IDs and tags
+        ids=()
+        tags=()
+        for release in $releases; do
+          release_decoded=$(decode "$release")
+          id=$(echo $release_decoded | jq -r '.id')
+          tag_name=$(echo $release_decoded | jq -r '.tag_name')
+          ids+=($id)
+          tags+=($tag_name)
+        done
+
+        # Calculate the threshold index
+        threshold_index=$(( ${#ids[@]} - 30 ))
+
+        # Delete releases older than the threshold
+        if [ $threshold_index -gt 0 ]; then
+          for (( i=0; i<$threshold_index; i++ )); do
+            gh api repos/${{ github.repository }}/releases/${ids[$i]} -X DELETE
+          done
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
