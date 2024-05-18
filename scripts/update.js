@@ -1,4 +1,4 @@
-// Define variables
+
 var req, res, resp, json, vers, modName, modRepo, hjsonUrl, localVersion, repoVersion;
 
 
