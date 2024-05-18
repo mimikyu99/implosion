@@ -5,13 +5,34 @@ on:
   push:
 
 jobs:
-
   publish_release:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Get the latest tag
+      id: get_latest_tag
+      run: echo "LATEST_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+
     - name: Generate version number
       id: version
-      run: echo "VERSION=$(date +%Y%m%d)-$(printf "%04d" $((RANDOM % 10000)))" >> $GITHUB_ENV
+      run: |
+        LATEST_TAG=${LATEST_TAG:-'0.0.0'}
+        IFS='.' read -r -a VERSION_PARTS <<< "$LATEST_TAG"
+        MAJOR=${VERSION_PARTS[0]}
+        MINOR=${VERSION_PARTS[1]}
+        PATCH=${VERSION_PARTS[2]}
+
+        if [ "$PATCH" -lt 9 ]; then
+          PATCH=$((PATCH + 1))
+        else
+          PATCH=0
+          MINOR=$((MINOR + 1))
+        fi
+
+        echo "VERSION=$MAJOR.$MINOR.$PATCH" >> $GITHUB_ENV
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
