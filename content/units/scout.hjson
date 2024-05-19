@@ -5,7 +5,7 @@ hitSize: 8
 flying: false
 itemCapacity: 0
 outlineColor: 191919
-speed: 4
+speed: 3
 weapons: [
   {
     ejectEffect: casing2
@@ -17,8 +17,8 @@ weapons: [
     shootSound: lasershoot
     inaccuracy: 5
     bullet: {
-      damage: 10
-      speed: 6
+      damage: 5
+      speed: 3
       drag: 0
       type: basicBulletType
       collidesAir: true
