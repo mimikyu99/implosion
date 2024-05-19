@@ -1,59 +1,56 @@
-{
-  "type": "flying",
-  "health": 280,
-  "armor": 2,
-  "hitSize": 8,
-  "flying": false,
-  "itemCapacity": 0,
-  "outlineColor": "191919",
-  "speed": 3,
-  "weapons": [
-    {
-      "ejectEffect": "casing2",
-      "x": 0,
-      "y": 0,
-      "mirror": true,
-      "reload": 30,
-      "rotate": true,
-      "shootSound": "lasershoot",
-      "inaccuracy": 8,
-      "bullet": {
-        "damage": 60,
-        "speed": 5,
-        "drag": 0.04,
-        "type": "basicBulletType",
-        "collidesAir": false,
-        "collidesGround": true,
-        "collidesTiles": true,
-        "collidesTeam": true,
-        "shrinkY": 0,
-        "shrinkX": 0,
-        "trailColor": "73FFAEFF",
-        "trailLength": 10,
-        "trailWidth": 2,
-        "despawnShake": 3,
-        "sprite": "circle-bullet",
-        "splashDamage": 26,
-        "splashDamageRadius": 60,
-        "keepVelocity": false,
-        "shootEffect": "none",
-        "hitEffect": {
-          "type": "ParticleEffect",
-          "particles": 20,
-          "length": 35,
-          "lifetime": 46,
-          "interp": "circleOut",
-          "cone": 360,
-          "colorFrom": "73FFAEFF",
-          "colorTo": "73FFAEFF",
-          "sizeFrom": 4,
-          "sizeTo": 0
-        }
-      },
-      "shoot": {
-        "shots": 2
+type: flying
+health: 280
+armor: 2
+hitSize: 8
+flying: false
+itemCapacity: 0
+outlineColor: 191919
+speed: 4
+weapons: [
+  {
+    ejectEffect: casing2
+    x: 0
+    y: 0
+    mirror: true
+    reload: 30
+    rotate: true
+    shootSound: lasershoot
+    inaccuracy: 5
+    bullet: {
+      damage: 10
+      speed: 10
+      drag: 0
+      type: basicBulletType
+      collidesAir: true
+      collidesGround: true
+      collidesTiles: true
+      collidesTeam: true
+      shrinkY: 0
+      shrinkX: 0
+      trailColor: 73FFAEFF
+      trailLength: 10
+      trailWidth: 2
+      despawnShake: 3
+      sprite: circle-bullet
+      splashDamage: 4
+      splashDamageRadius: 15
+      keepVelocity: false
+      shootEffect: none
+      hitEffect: {
+        type: ParticleEffect
+        particles: 20
+        length: 35
+        lifetime: 46
+        interp: circleOut
+        cone: 360
+        colorFrom: 33646b
+        colorTo: 66b4aa
+        sizeFrom: 4
+        sizeTo: 0
       }
     }
-  ]
-}
-
+    shoot: {
+      shots: 2
+    }
+  }
+]
