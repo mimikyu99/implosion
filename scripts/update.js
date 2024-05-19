@@ -18,7 +18,7 @@ Events.on(ClientLoadEvent, (event) => {
                 Vars.ui.showMenu(
                     Core.bundle.get("scripts.update.title"),
                     Core.bundle.get("scripts.update.content"),
-                    [["[red]ingore"], ["[green]Reinstall"]],
+                    [["[red]ignore"], ["[green]Reinstall"]],
                     (option) => {
                         if (option == 1) {
                             var mod = Vars.mods.locateMod("implosion");
