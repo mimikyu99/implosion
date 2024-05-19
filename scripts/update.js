@@ -44,7 +44,7 @@ Events.on(ClientLoadEvent, (event) => {
             Log.err("Implosion - Error parsing response: " + err.toString());
         }
     }, (err) => {
-        Vars.ui.showOkText("[sky]Implosion[white]", "[red]ERROR:[white] Cannot check for updates!", () => {});
+        Vars.ui.showOkText(Core.bundle.get("scripts.update.title"), Core.bundle.get("scripts.update.error.content"), () => {});
         Log.err("Implosion - update check failed: " + err.toString());
     });
 });
