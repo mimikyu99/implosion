@@ -9,7 +9,6 @@
   speed: 5,
   weapons: [
     {
-      name: "small-blaster",
       ejectEffect: "casing2",
       x: -3.5,
       y: 2,
@@ -18,8 +17,44 @@
       rotate: true,
       shootSound: "lasershoot",
       inaccuracy: 8,
+      bullet: {
+        damage: 10,
+        speed: -1.5,
+        drag: 0.04,
+        type: "basicBulletType",
+        collidesAir: false,
+        collidesGround: true,
+        collidesTiles: true,
+        collidesTeam: true,
+        status: "slow",
+        statusDuration: 500,
+        healPercent: 50,
+        shrinkY: 0,
+        shrinkX: 0,
+        trailColor: "73FFAEFF",
+        trailLength: 10,
+        trailWidth: 2,
+        despawnShake: 3,
+        sprite: "circle-bullet",
+        splashDamage: 26,
+        splashDamageRadius: 60,
+        keepVelocity: false,
+        shootEffect: "none",
+        hitEffect: {
+          type: "ParticleEffect",
+          particles: 20,
+          length: 35,
+          lifetime: 46,
+          interp: "circleOut",
+          cone: 360,
+          colorFrom: "73FFAEFF",
+          colorTo: "73FFAEFF",
+          sizeFrom: 4,
+          sizeTo: 0
+        }
+      },
       shoot: {
-        shots: 8
+        shots: 2
       }
     }
   ]
