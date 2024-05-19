@@ -1,41 +1,40 @@
-var req, res, resp, json, vers, modName, modRepo, hjsonUrl, localVersion, repoVersion;
+Events.on(ClientLoadEvent.class, event -> {
+    Log.info("Implosion - Sending version check");
 
-modName = "implosion";
-modRepo = Vars.mods.locateMod(modName).getRepo();
-hjsonUrl = "https://raw.githubusercontent.com/0rang30rang3/implosion/main/mod.hjson";
+    var req = new Http.get(
+        "https://raw.githubusercontent.com/0rang30rang3/implosion/main/mod.hjson",
+        res -> {
+            var resp = res.getResultAsString();
+            Log.info("Implosion - response: \n" + resp);
+            var json = Jval.read(resp);
+            Log.info("Implosion - remote ver: " + json.get("version"));
+            var vers = Vars.mods.getMod("implosion").meta.version;
+            Log.info("Implosion - local version: " + vers);
 
-Events.on(ClientLoadEvent, (event) => {
-    localVersion = json.get("version");
-    Log.info("Local mod version: " + localVersion);
-
-    req = new Http.get(
-        hjsonUrl,
-        (result) => {
-            try {
-                resp = result.getResultAsString();
-                json = Jval.read(resp);
-                repoVersion = json.get("version");
-                Log.info("Repository mod version: " + repoVersion);
-
-                if (!localVersion.equals(repoVersion)) {
+            if (!vers.equals(json.get("version"))) {
+                Log.warn("Implosion - not up to date");
+                try {
                     Vars.ui.showMenu(
-                        "TEST",
-                        "TEXT GOES HERE",
-                        [
-                            ["\[red\]Ok"],
-                            ["\[green\]Update"]
-                        ],
-                        (option) => {
+                        "\[#22CCFF\]Implosion\[white\]",
+                        Core.bundle.get("scripts.update-aquaria"),
+                        new String[][] {
+                            {"\[gray\]Ok"},
+                            {"\[green\]Reinstall"}
+                        },
+                        option -> {
                             if (option == 1) {
-                                Vars.ui.mods.githubImportMod(modRepo);
+                                Vars.ui.mods.githubImportMod(
+                                    Vars.mods.locateMod("implosion").getRepo(),
+                                    Vars.mods.locateMod("implosion").isJava()
+                                );
                                 var shown = false;
                                 Timer.schedule(
-                                    () => {
+                                    () -> {
                                         if (Vars.mods.requiresReload() && !shown) {
                                             shown = true;
                                             Vars.ui.showInfoOnHidden(
                                                 "@mods.reloadexit",
-                                                () => {
+                                                () -> {
                                                     Core.app.exit();
                                                 }
                                             );
@@ -47,10 +46,20 @@ Events.on(ClientLoadEvent, (event) => {
                             }
                         }
                     );
+                } catch (Exception err) {
+                    Log.info("Error: " + err.toString());
                 }
-            } catch (err) {
-                Log.info("Error: " + err.toString());
+            } else {
+                Log.info("Implosion - up to date");
             }
+        },
+        err -> {
+            Vars.ui.showOkText(
+                "\[#22CCFF\]Implosion\[white\]",
+                "\[red\]ERROR:\[white\] Cannot check for updates!",
+                () -> {}
+            );
+            Log.err("Implosion - update check failed :(");
         }
     );
 });
