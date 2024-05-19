@@ -1,6 +1,4 @@
-
 var req, res, resp, json, vers, modName, modRepo, hjsonUrl, localVersion, repoVersion;
-
 
 modName = "implosion";
 modRepo = Vars.mods.locateMod(modName).getRepo();
@@ -9,27 +7,27 @@ hjsonUrl = "https://raw.githubusercontent.com/0rang30rang3/implosion/main/mod.hj
 Events.on(ClientLoadEvent, (event) => {
     localVersion = json.get("version");
     Log.info("Local mod version: " + localVersion);
+
     req = new Http.get(
         hjsonUrl,
-        (res) => {
-            resp = res.getResultAsString();
-            json = Jval.read(resp);
-            repoVersion = Vars.mods.getMod(modName).meta.version;
-            Log.info("Repository mod version: " + repoVersion);
+        (result) => {
+            try {
+                resp = result.getResultAsString();
+                json = Jval.read(resp);
+                repoVersion = json.get("version");
+                Log.info("Repository mod version: " + repoVersion);
 
-            if (!localVersion.equals(repoVersion)) {
-                try {
+                if (!localVersion.equals(repoVersion)) {
                     Vars.ui.showMenu(
                         "TEST",
                         "TEXT GOES HERE",
                         [
-                            ["[red]Ok"],
-                            ["[green]Update"]
+                            ["\[red\]Ok"],
+                            ["\[green\]Update"]
                         ],
                         (option) => {
                             if (option == 1) {
                                 Vars.ui.mods.githubImportMod(modRepo);
-
                                 var shown = false;
                                 Timer.schedule(
                                     () => {
@@ -49,9 +47,9 @@ Events.on(ClientLoadEvent, (event) => {
                             }
                         }
                     );
-                } catch (err) {
-                    Log.info("Error: " + err.toString());
                 }
+            } catch (err) {
+                Log.info("Error: " + err.toString());
             }
         }
     );
