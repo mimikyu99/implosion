@@ -1,14 +1,16 @@
-type: PowerNode
 name: Silver Node
-description: Connects wires over small distances without needing to directly connect. A wire bridge.
+type: beamNode
+health: 160
 size: 1
-health: 20
-squareSprite: false
-laserRange: 1
-maxNodes: 4
+range: 0
+fogRadius: 2
+consumesPower: true
+outputsPower: true
+consumes: {
+    powerBuffered: 1
+    }
 requirements: [
-  silver/8
+silver/5
 ]
 category: power
 research: core-crab
-researchCostMultiplier: 0.5
