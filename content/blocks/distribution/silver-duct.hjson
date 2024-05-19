@@ -1,6 +1,4 @@
 type: Duct
-name: silver duct.
-description: Transports items.
 category: distribution
 alwaysUnlocked: false
 
