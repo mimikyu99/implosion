@@ -16,9 +16,9 @@ Events.on(ClientLoadEvent, (event) => {
             if (!localVersion.equals(remoteVersion)) {
                 Log.warn("Implosion - not up to date");
                 Vars.ui.showMenu(
-                    "[sky]Implosion[white]",
-                    Core.bundle.get("scripts.update-implosion"),
-                    [["[gray]Ok"], ["[green]Reinstall"]],
+                    Core.bundle.get("scripts.update.title"),
+                    Core.bundle.get("scripts.update.content"),
+                    [["[red]ingore"], ["[green]Reinstall"]],
                     (option) => {
                         if (option == 1) {
                             var mod = Vars.mods.locateMod("implosion");
