@@ -37,7 +37,7 @@ weapons: [
       hitEffect: "none"
       despawnEffect: "none"
       damage: 0
-      splashDamage: 170
+      splashDamage: 20
       splashDamageRadius: 32
       hitEffect: "instHit"
       despawnHit: true
