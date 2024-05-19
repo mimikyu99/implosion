@@ -1,15 +1,24 @@
-type: beamNode
+type: ArmoredConveyor
+
 health: 160
-size: 1
-range: 0
-fogRadius: 2
-consumesPower: true
-outputsPower: true
-consumes: {
-    powerBuffered: 1
-    }
+
 requirements: [
-silver/5
+  silver/1
 ]
+
+
+consumes: {
+  powerBuffered: 1
+} 
+
 category: power
-research: core-crab
+
+solid: false
+researchCostMultiplier: 0.5
+
+conductivePower: true
+acceptsItems: false
+instantTransfer: false
+hasPower: true
+outputsPower: true
+squareSprite: false
