@@ -1,5 +1,3 @@
-type: DuctBridge
-name: Silver Bridge
 description: Acts as a bridge for crossing pipelines or terrain.
 health: 135
 size: 1
