@@ -19,8 +19,6 @@ requirements: [
   carbon/160
   silver/70
 ]
-ambientSound: "spellLoop"
-loopSound: "spellLoop"
-ambientSoundVolume: 15
-loopSoundVolume: 15
+ambientSound: hum
+ambientSoundVolume: 1
 itemCapacity: 20
