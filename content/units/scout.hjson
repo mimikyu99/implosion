@@ -1,8 +1,8 @@
-type: flying
+type: hover
 health: 280
 armor: 2
 hitSize: 8
-flying: false
+flying: true
 itemCapacity: 0
 outlineColor: 191919
 speed: 3
