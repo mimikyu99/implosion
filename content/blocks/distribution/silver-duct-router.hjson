@@ -1,12 +1,17 @@
 type: Router
+category: distribution
+
 size: 1
 speed: 6
 health: 110
 itemCapacity: 3
+squareSprite: false
+
+
+
 requirements: [
   silver/3
 ]
-squareSprite: false
-category: distribution
+
 research: silver-duct
 researchCostMultiplier: 0.5
