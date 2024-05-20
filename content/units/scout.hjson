@@ -14,11 +14,11 @@ weapons: [
     mirror: true
     reload: 30
     rotate: true
-    shootSound: lasershoot
+    shootSound: splash
     inaccuracy: 5
     bullet: {
       damage: 6
-      speed: 3
+      speed: 2
       drag: 0
       type: basicBulletType
       collidesAir: true
@@ -29,7 +29,7 @@ weapons: [
       shrinkX: 0
       trailColor: 73FFAEFF
       trailLength: 10
-      trailWidth: 2
+      trailWidth: 1
       despawnShake: 3
       sprite: circle-bullet
       splashDamage: 4
@@ -40,7 +40,7 @@ weapons: [
         type: ParticleEffect
         particles: 20
         length: 35
-        lifetime: 46
+        lifetime: 60
         interp: circleOut
         cone: 360
         colorFrom: 33646b
