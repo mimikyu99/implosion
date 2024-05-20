@@ -55,5 +55,5 @@ mesh: [
 ]
 
 itemWhitelist: [
-  sand, silver, carbon
+  sand, silver, carbon, beryllium
 ]
