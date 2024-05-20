@@ -33,7 +33,7 @@ weapons: [
       buildingDamageMultiplier: 0.01
       speed: 3
       lifetime: 30
-      damage: 8
+      damage: 15
       splashDamage: 4
       splashDamageRadius: 12
       width: 8
@@ -45,6 +45,11 @@ weapons: [
       shootEffect: shootSmall
       smokeEffect: shootSmallSmoke
       buildingDamageMultiplier: 0.01
+frontColor: 5a8bc7
+backColor: 3b4978
+trailColor: 3b4978
+trailLength: 8
+trailWidth: 5
 }
 }
 ]
