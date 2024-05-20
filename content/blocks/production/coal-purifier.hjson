@@ -1,5 +1,5 @@
 type: GenericCrafter
-name: Coal purificatpr
+name: Coal purifier
 description: Purificates coal in to carbon that can be furtermore processed.
 size: 3
 craftEffect: "producesmoke"
