@@ -1,6 +1,6 @@
 {
-  type: "flying"
-  hovering: true
+  type: "hover"
+  flying: true
   groundLayer: 200
   health: 135
   armor: 1
