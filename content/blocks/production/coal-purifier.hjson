@@ -17,6 +17,7 @@ research: core-crab
 
 requirements: [
   silver/70
+  beryllium/40
 ]
 ambientSound: hum
 ambientSoundVolume: 1
