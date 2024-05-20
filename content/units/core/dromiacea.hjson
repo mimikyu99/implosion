@@ -15,6 +15,7 @@ drag: 0.01
 itemCapacity: 20
 alwaysUnlocked: true
 outlineColor: 42413e
+propulsorSize: 2
 
       trailChance: -1
       trailEffect: dynamicSpikes
