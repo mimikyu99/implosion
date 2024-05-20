@@ -7,15 +7,15 @@ squareSprite: false
 craftTime: 30
 consumes: {
   items: [
-    carbon/5
+    coal/5
     ]
 }
 outputItem: carbon/1
 category: crafting
 researchCostMultiplier: 0.5
 research: core-crab
+
 requirements: [
-  coal/160
   silver/70
 ]
 ambientSound: hum
