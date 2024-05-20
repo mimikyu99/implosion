@@ -14,9 +14,10 @@ consumes: {
 outputItem: carbon-fiber/1
 category: crafting
 researchCostMultiplier: 0.5
-research: core-crab
+research: coal-purifier
 requirements: [
-  carbon/160
+  carbon/30
+  beryllium/40
   silver/70
 ]
 ambientSound: hum
