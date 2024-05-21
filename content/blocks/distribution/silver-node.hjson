@@ -9,7 +9,8 @@ requirements: [
 
 
 consumes: {
-  powerBuffered: 1
+  power: 1
+  powerBuffered: 5
 } 
 
 category: power
