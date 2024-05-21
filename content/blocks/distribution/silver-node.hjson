@@ -1,4 +1,4 @@
-type: Duct
+type: ArmoredConveyor
 
 health: 160
 speed: 0
