@@ -1,6 +1,7 @@
 type: Duct
 
 health: 160
+speed: 0
 
 requirements: [
   silver/1
