@@ -1,6 +1,6 @@
 type: "ItemTurret"
 name: "Trailer"
-description: "Fires alternating Silver bullets. Can shoot flames with flammable ammo."
+description: 
 size: 2
 health: 800
 reload: 55

@@ -23,5 +23,5 @@ acceptsItems: false
 instantTransfer: false
 hasPower: true
 outputsPower: true
-
+research: core-crab
 squareSprite: false
