@@ -23,4 +23,5 @@ acceptsItems: false
 instantTransfer: false
 hasPower: true
 outputsPower: true
+
 squareSprite: false
