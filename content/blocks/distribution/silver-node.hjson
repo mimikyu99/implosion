@@ -18,7 +18,6 @@ solid: false
 researchCostMultiplier: 0.5
 
 conductivePower: true
-transportItems: false
 acceptsItems: false
 instantTransfer: false
 hasPower: true
