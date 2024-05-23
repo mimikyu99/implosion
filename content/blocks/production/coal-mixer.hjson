@@ -7,7 +7,7 @@ squareSprite: false
 craftTime: 30
 consumes: {
   items: [
-    coal/3
+    coal/2
     ]
 }
 outputItem: carbon/2
