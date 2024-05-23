@@ -4,7 +4,7 @@ description: Purificates coal in to carbon that can be furtermore processed.
 size: 2
 craftEffect: "producesmoke"
 squareSprite: false
-craftTime: 30
+craftTime: 40
 consumes: {
   items: [
     coal/2
