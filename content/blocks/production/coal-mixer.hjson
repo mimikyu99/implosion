@@ -7,10 +7,10 @@ squareSprite: false
 craftTime: 30
 consumes: {
   items: [
-    coal/5
+    coal/3
     ]
 }
-outputItem: carbon/1
+outputItem: carbon/2
 category: crafting
 researchCostMultiplier: 0.5
 research: core-crab

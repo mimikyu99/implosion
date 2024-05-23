@@ -7,7 +7,7 @@ squareSprite: false
 craftTime: 14
 consumes: {
   items: [
-    carbon/2
+    carbon/1.5
     sand/1
     ]
 }
