@@ -12,7 +12,7 @@ silver/15
 hardnessDrillMultiplier: 50
 drillTime: 280
 hasPower: false
-tier: 1
+tier: 2
 shake: 0.5
 itemCapacity: 20
 researchCostMultiplier: 0.5

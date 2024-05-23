@@ -1,7 +1,7 @@
 type: GenericCrafter
 name: Coal Mixer
 description: Purificates coal in to carbon that can be furtermore processed.
-size: 3
+size: 2
 craftEffect: "producesmoke"
 squareSprite: false
 craftTime: 30
