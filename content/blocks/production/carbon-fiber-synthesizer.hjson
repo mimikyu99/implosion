@@ -4,10 +4,10 @@ description: Weaves Carbon and Sand together to make Carbon Fiber.
 size: 3
 craftEffect: "producesmoke"
 squareSprite: false
-craftTime: 14
+craftTime: 20
 consumes: {
   items: [
-    carbon/1.5
+    carbon/2
     sand/1
     ]
 }
