@@ -5,6 +5,9 @@ speed: 5.6
 health: 65
 size:1
 
+bridgeReplacement: silver-duct-bridge
+junctionReplacement: silver-junction
+
 research: core-crab
 researchCostMultiplier: 0.5
 
