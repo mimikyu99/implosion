@@ -6,7 +6,7 @@ squareSprite: false
 range: 4
 speed: 4.285714
 researchCostMultiplier: 0.5
-health: 135
+health: 130
 size: 1
 
 

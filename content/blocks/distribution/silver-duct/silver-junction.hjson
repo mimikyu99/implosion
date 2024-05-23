@@ -1,0 +1,13 @@
+type: Junction
+name: Silver Junction
+description: Allows for crossing two ducts. 
+health: 65
+size: 1
+
+requirements: [
+ silver/2
+]
+squareSprite: false
+category: distribution
+research: silver-duct
+researchCostMultiplier: 0.5

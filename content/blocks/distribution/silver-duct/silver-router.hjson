@@ -3,7 +3,7 @@ category: distribution
 
 size: 1
 speed: 6
-health: 110
+health: 65
 itemCapacity: 3
 squareSprite: false
 
