@@ -27,9 +27,8 @@ orbitTime: 12000
 rotateTime: 5000
 accessible: true
 alwaysUnlocked: true
-defaultEnv: 129
-allowLaunchSchematics: false
-allowLaunchLoadout: false
+allowLaunchSchematics: true
+allowLaunchLoadout: true
 allowWaveSimulation: false
 allowSectorInvasion: false
 clearSectorOnLose: false
