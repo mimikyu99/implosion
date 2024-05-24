@@ -1,5 +1,0 @@
-type: Floor
-localizedName: Dune
-variants: 1
-itemDrop: sand
-playerUnmineable: true

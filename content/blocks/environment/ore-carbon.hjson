@@ -1,4 +1,0 @@
-type: OreBlock
-  name: coal Ore2
-itemDrop: coal
-  variants: 3
