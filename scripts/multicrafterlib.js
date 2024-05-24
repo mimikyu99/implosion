@@ -1,7 +1,7 @@
 Events.on(ClientLoadEvent, (event) => {
     Log.info("MultiCrafterLib - Checking if the mod is installed");
 
-    var mod = Vars.mods.getMod("test");
+    var mod = Vars.mods.getMod("multi-crafter");
     if (mod == null) {
         Log.info("MultiCrafterLib - not installed");
 
