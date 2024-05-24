@@ -1,7 +1,7 @@
 type: "ItemTurret"
 name: "Trailer"
 description: 
-size: 2
+size: 3
 health: 800
 reload: 55
 recoil: 5
