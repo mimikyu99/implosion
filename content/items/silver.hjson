@@ -4,3 +4,4 @@ hardness: 1.5
   cost:1.5
   alwaysUnlocked:true
 color: b8b8b8
+research: "core-crab"
