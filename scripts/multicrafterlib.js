@@ -27,6 +27,9 @@ Events.on(ClientLoadEvent, (event) => {
                     }, 2, 1);
                 } else if (option == 1) {
                     Vars.mods.setEnabled(Vars.mods.getMod("implosion"), false)
+                    Vars.ui.showInfoOnHidden("@mods.reloadexit", () => {
+                        Core.app.exit();
+                    });
                 }
             }
         );
