@@ -34,8 +34,23 @@ mesh: [
     cscl: 1
     cthresh: 4
   }
+{
+    type: NoiseMesh
+    divisions: 6
+    radius: 0.9
+    color1: 599e89
+    color2: 396b53
+    octaves: 2
+    persistence: 0.0003
+    scale: 0.0002
+    mag: 0.996
+    coct: 1
+    cper: 1
+    cscl: 1
+    cthresh: 4
+  }
 ]
-
+defaultCore : core-crab
 itemWhitelist: [
   "sand",
   "silver",
