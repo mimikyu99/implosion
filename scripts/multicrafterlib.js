@@ -10,7 +10,7 @@ Events.on(ClientLoadEvent, (event) => {
             Core.bundle.get("scripts.multicrafter.content"),
             ["[green]install[white]"]],
             (option) => {
-                if (option == 1) {
+                if (option == 0) {
                     Log.info("MultiCrafterLib - Downloading and installing the mod");
 
                     Vars.ui.mods.githubImportMod("liplum/MultiCrafterLib", true);
