@@ -19,7 +19,7 @@ weapons: [
     inaccuracy: 5
     bullet: {
       damage: 6
-      speed: 2
+      speed: 4
       drag: 0
       type: basicBulletType
       collidesAir: true
