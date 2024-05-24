@@ -4,3 +4,4 @@ hardness: 1.5
   cost:2
   alwaysUnlocked:true
   color: 333333
+research: "carbon"
