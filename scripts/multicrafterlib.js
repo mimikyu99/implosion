@@ -8,24 +8,22 @@ Events.on(ClientLoadEvent, (event) => {
         Vars.ui.showMenu(
             Core.bundle.get("scripts.multicrafter.title"),
             Core.bundle.get("scripts.multicrafter.content"),
-            ["[green]install[white]"]],
+            [["[green]install[white]"]],
             (option) => {
-                if (option == 0) {
-                    Log.info("MultiCrafterLib - Downloading and installing the mod");
+                Log.info("MultiCrafterLib - Downloading and installing the mod");
 
-                    Vars.ui.mods.githubImportMod("liplum/MultiCrafterLib", true);
+                Vars.ui.mods.githubImportMod("liplum/MultiCrafterLib", true);
 
-                    var shown = false;
+                var shown = false;
 
-                    Timer.schedule(() => {
-                        if (Vars.mods.requiresReload() && !shown) {
-                            shown = true;
-                            Vars.ui.showInfoOnHidden("@mods.reloadexit", () => {
-                                Core.app.exit();
-                            });
-                        }
-                    }, 2, 1);
-                }
+                Timer.schedule(() => {
+                    if (Vars.mods.requiresReload() && !shown) {
+                        shown = true;
+                        Vars.ui.showInfoOnHidden("@mods.reloadexit", () => {
+                            Core.app.exit();
+                        });
+                    }
+                }, 2, 1);
             }
         );
     } else {
