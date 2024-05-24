@@ -7,7 +7,7 @@ Events.on(ClientLoadEvent, (event) => {
 
         Vars.ui.showMenu(
             Core.bundle.get("scripts.multicrafter.title"),
-            Core.bundle.get("scripts.multicrafter.content")
+            Core.bundle.get("scripts.multicrafter.content"),
             [["[red]no"], ["[green]yes[white]"]],
             (option) => {
                 if (option == 1) {
