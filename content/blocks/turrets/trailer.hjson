@@ -47,7 +47,7 @@ ammoTypes: {
     collidesGround: true
     collidesAir: true
     ammoMultiplier: 1
-    damage: 20
+    damage: 30
   }
 }
 base: "trailer-base"
