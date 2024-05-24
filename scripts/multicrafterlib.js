@@ -10,7 +10,7 @@ Events.on(ClientLoadEvent, (event) => {
             Core.bundle.get("scripts.multicrafter.content"),
             [["[green]install[white]"], ["[red]Cancel(disable implosion)"]],
             (option) => {
-                if (option == 1) {
+                if (option == 0) {
                     Log.info("MultiCrafterLib - Downloading and installing the mod");
 
                     Vars.ui.mods.githubImportMod("liplum/MultiCrafterLib", true);
@@ -25,7 +25,7 @@ Events.on(ClientLoadEvent, (event) => {
                             });
                         }
                     }, 2, 1);
-                } else if (option == 2) {
+                } else if (option == 1) {
                     Vars.mods.setEnabled(Vars.mods.getMod("implosion"), false)
                 }
             }
