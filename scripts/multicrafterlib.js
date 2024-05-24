@@ -6,8 +6,8 @@ Events.on(ClientLoadEvent, (event) => {
         Log.info("MultiCrafterLib - not installed");
 
         Vars.ui.showMenu(
-            "ore.bundle.get("scripts.multicrafter.title")",
-            "ore.bundle.get("scripts.multicrafter.contnt")"
+            core.bundle.get("scripts.multicrafter.title"),
+            core.bundle.get("scripts.multicrafter.content")
             [["[red]no"], ["[green]yes[white]"]],
             (option) => {
                 if (option == 1) {
