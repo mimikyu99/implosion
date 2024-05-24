@@ -8,7 +8,7 @@ Events.on(ClientLoadEvent, (event) => {
         Vars.ui.showMenu(
             Core.bundle.get("scripts.multicrafter.title"),
             Core.bundle.get("scripts.multicrafter.content"),
-            [["[red]no(keep implosion disabled)[white]"], ["[green]yes[white]"]],
+            ["[green]install[white]"]],
             (option) => {
                 if (option == 1) {
                     Log.info("MultiCrafterLib - Downloading and installing the mod");
