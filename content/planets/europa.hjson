@@ -39,6 +39,7 @@ mesh: [
 itemWhitelist: [
   "sand",
   "silver",
+  "coal",
   "carbon", 
   "beryllium",
 ]
