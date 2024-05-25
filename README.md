@@ -8,7 +8,7 @@
 </div>
 
 # Implosion
-A mindustry mod,that adds a brand new planet: **europa** one of the seven moons of Jupiter,also whit a brand new tech tree.
+Explore a new planet: **europa**, an underwater world infested by mechanical and natural invaders. Forget the classic gameplay of Erekir and Serpulo as you try to eradicate the enemy presence of the abyss team while harnessing the power of the enervine, an invasive specie that was possibly genetically modified in an abandoned facility that you can explore. Plentiful new game mechanics are introduced in a fully-fledged campaign that can be completed with 3 (offense) + 1 (mining) unit trees each having unique characteristics.
 
 
 # Socials
