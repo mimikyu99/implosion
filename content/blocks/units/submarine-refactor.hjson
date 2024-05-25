@@ -4,25 +4,18 @@ size: 3
 consumes: {
   power: 5
 }
+
 plans: [
   {
-    unit: b01-majoris
+    unit: scout
     requirements: [
-      silicon/25
-      astrolite/15
+      beryllium/10
+      carbon/20
     ]
-    time: 400
-  }
-  {
-    unit: b01-orion
-    requirements: [
-      silicon/10
-      astrolite/20
-      graphite/10
-    ]
-    time: 400
+    time: 720
   }
 ]
+
 requirements: [
   silicon/580
   graphite/180
