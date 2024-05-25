@@ -1,0 +1,7 @@
+name:"Argon"
+  description: "a common carbon based gas."
+hardness: 1.5
+  cost:1.5
+  alwaysUnlocked:false
+  color: 424242
+research: "carbon"
