@@ -2,7 +2,7 @@ type: UnitFactory
 researchCostMultiplier: 0.3
 size: 3
 consumes: {
-  power: 5
+  power: 2
 }
 
 plans: [
