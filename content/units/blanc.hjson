@@ -3,9 +3,9 @@ speed: 0.6
 health: 170
 armor: 1
 flying: false
-legExtension: -2.5
+legExtension: 4
 buildSpeed: 0.6
-legMoveSpace: 0.9
+legMoveSpace: 4
 hovering: false
 isEnemy: false
 legCount: 6
