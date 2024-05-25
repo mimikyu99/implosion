@@ -2,7 +2,7 @@ require("planetarium");
 
 
 const target = "manifold";
-const baseColor = Color.valueOf("96a0be");
+const baseColor = Color.valueOf("6d7acf");
 let palette = [
 Color.valueOf("544ba6"),
 baseColor,
