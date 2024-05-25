@@ -17,9 +17,9 @@ plans: [
 ]
 
 requirements: [
-  silicon/580
-  graphite/180
-  astrolite/180
+    carbon-fiber/50
+    beryllium/50
+    
 ]
 category: units
 research: team-genesux
