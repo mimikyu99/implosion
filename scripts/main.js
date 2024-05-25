@@ -4,6 +4,7 @@
 */
 
 Log.info("Implosion mod started...")
+require("team")
 require("multicrafterlib")
 require("update")
 
