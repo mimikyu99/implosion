@@ -6,7 +6,7 @@
   squareSprite: false,
   health: 500,
   size: 5,
-  powerProduction: 0.5,
+  powerProduction: 4,
   itemCapacity: 10,
   drawer: {
     type: DrawMulti,
@@ -17,7 +17,7 @@
       {
         type: DrawGlowRegion,
         suffix: -glow,
-        color: 66B1FFFF
+        color: 916595
       }
     ]
   },
@@ -27,8 +27,8 @@
     ]
   },
   requirements: [
-    carbon-fiber/30,
-    silver/15
+    carbon-fiber/60,
+    silver/100
   ],
   category: power,
   research: silver-node,
