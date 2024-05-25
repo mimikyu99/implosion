@@ -20,7 +20,7 @@ Events.on(ContentInitEvent, () => {
   let ch = Fonts.getUnicode(target);
 
   let size = Mathf.round(Fonts.def.getData().lineHeight / Fonts.def.getData().scaleY);
-  let tex = Core.atlas.find("farborne-industries-team-Abyss");
+  let tex = Core.atlas.find("implosion-team-Abyss");
   let out = Scaling.fit.apply(tex.width, tex.height, size, size);
 
   for(let font of fonts){
