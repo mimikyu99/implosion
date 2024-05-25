@@ -1,0 +1,30 @@
+type: Constructor
+name: Submarine refactor
+description: Creates basic submarine tier 1 units, requires power.
+size: 3
+category: units
+
+requirements: [
+  beryllium/50
+  carbon-fiber/50
+]
+
+plans: [
+  {
+    type: AssemblerUnitPlan
+    unit: scout
+    requirements: [
+      beryllium/10
+      carbon/20
+    ]
+    time: 720
+  }
+]
+
+squareSprite: false
+
+consumes: {
+  power: 2
+}
+
+researchCostMultiplier: 0.5
