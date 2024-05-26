@@ -34,7 +34,10 @@ drawer: {
   ]
 }
 
-outputLiquid: iodide
+
+outputLiquids: [
+    iodide/0.6
+],
 category: crafting
 researchCostMultiplier: 0.5
 research: core-crab

@@ -23,7 +23,7 @@
   },
   consumes: {
     liquids: [
-      argon/1
+      iodide/1
     ]
   },
   requirements: [
