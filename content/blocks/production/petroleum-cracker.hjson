@@ -1,0 +1,52 @@
+type: GenericCrafter
+name: Petroleum cracker
+description: Transforms oil into iodide by cracking it.
+size: 4
+squareSprite: false
+craftTime: 40
+consumes: {
+  power: 0.40,
+  liquids: [
+    oil/2
+  ]
+}
+
+drawer: {
+  type: DrawMulti,
+  drawers: [
+    {
+      type: DrawDefault
+    },
+    {
+      type: DrawLiquidTile,
+      suffix: -liquid,
+      drawLiquid: iodide
+    },
+    {
+      type: DrawFlame,
+      flameColor: 74C2E8FF,
+      flameRadius: 7.2,
+      flameRadiusIn: 4.0,
+      flameRadiusScl: 6.5,
+      flameRadiusMag: 3.0,
+      flameRadiusInMag: 1.0
+    }
+  ]
+}
+
+outputLiquid: iodide
+category: crafting
+researchCostMultiplier: 0.5
+research: core-crab
+
+requirements: [
+  silver/140,
+  beryllium/70,
+  carbon-fiber/20
+]
+
+hasPower: true
+hasLiquid: true
+ambientSound: hum
+ambientSoundVolume: 1
+itemCapacity: 20

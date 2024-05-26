@@ -1,5 +1,5 @@
-name:"Argon"
-  description: "a common carbon based gas."
+name:"iodide"
+  description: "a common carbon based gas,extremely hot."
 hardness: 1.5
   cost:1.5
   alwaysUnlocked:false

@@ -14,11 +14,11 @@
       {
         type: DrawDefault
       },
-      {
-        type: DrawGlowRegion,
-        suffix: -glow,
-        color: 916595
-      }
+    {
+      type: DrawLiquidTile,
+      suffix: -liquid,
+      drawLiquid: iodide
+    }
     ]
   },
   consumes: {
