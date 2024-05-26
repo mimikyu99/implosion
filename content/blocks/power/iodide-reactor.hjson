@@ -27,7 +27,7 @@ consumes: {
   ]
 }
 requirements: [
-  carbon-fiber/60,
+  carbon-fiber/30,
   silver/100
 ]
 category: power

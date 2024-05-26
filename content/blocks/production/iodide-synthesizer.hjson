@@ -1,5 +1,5 @@
 type: GenericCrafter
-size: 2
+size: 3
 craftEffect: "producesmoke"
 squareSprite: false
 craftTime: 40
@@ -11,7 +11,7 @@ consumes: {
 }
 
 outputLiquids: [
-    iodide/0.1
+    iodide/0.3
 ],
 
 category: crafting
@@ -20,8 +20,9 @@ research: core-crab
 
 requirements: [
   silver/70
-  beryllium/40
+  beryllium/70
 ]
 ambientSound: hum
 ambientSoundVolume: 1
 itemCapacity: 20
+hasPower: true
