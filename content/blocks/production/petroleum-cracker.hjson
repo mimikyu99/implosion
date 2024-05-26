@@ -20,7 +20,7 @@ drawer: {
     }
     {
       type: DrawLiquidRegiom.
-      suffix: "-glow",
+      suffix: "-liquid",
       liquid: iodide,
     }
   ]
