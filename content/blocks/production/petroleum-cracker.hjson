@@ -20,7 +20,7 @@ drawer: {
     }
     {
       type: DrawGlowRegion.
-      suffix: "-liquid",
+      suffix: "-glow",
       color: 65497c
     },
     {
