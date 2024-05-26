@@ -16,6 +16,9 @@ drawer: {
   type: DrawMulti,
   drawers: [
     {
+        type: DrawDefault
+    }
+    {
       type: DrawGlowRegion.
       suffix: "-liquid",
       color: 65497c
