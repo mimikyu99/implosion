@@ -16,12 +16,9 @@ drawer: {
   type: DrawMulti,
   drawers: [
     {
-      type: DrawDefault
-    },
-    {
-      type: DrawLiquidTile,
+      type: DrawGlowRegion.
       suffix: -liquid,
-      drawLiquid: iodide
+      color: 65497c
     },
     {
       type: DrawFlame,
