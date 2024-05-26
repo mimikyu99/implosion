@@ -22,15 +22,6 @@ drawer: {
       type: DrawGlowRegion.
       suffix: "-glow",
       color: 65497c
-    },
-    {
-      type: DrawFlame,
-      flameColor: E25822,
-      flameRadius: 7.2,
-      flameRadiusIn: 4.0,
-      flameRadiusScl: 6.5,
-      flameRadiusMag: 3.0,
-      flameRadiusInMag: 1.0
     }
   ]
 }
@@ -53,4 +44,4 @@ hasPower: true
 hasLiquid: true
 ambientSound: hum
 ambientSoundVolume: 1
-itemCapacity: 20
+liquidCapacity: 40
