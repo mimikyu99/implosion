@@ -2,6 +2,7 @@ type: GenericCrafter
 name: Petroleum cracker
 description: Transforms oil into iodide by cracking it.
 size: 4
+craftEffect: "producesmoke"
 squareSprite: false
 craftTime: 40
 consumes: {
