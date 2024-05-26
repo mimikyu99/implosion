@@ -10,7 +10,7 @@ silver/15
 ]
     }
 hardnessDrillMultiplier: 50
-drillTime: 280
+drillTime: 140
 hasPower: false
 tier: 2
 shake: 0.5
