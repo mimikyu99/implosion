@@ -23,7 +23,7 @@ drawer: {
 }
 consumes: {
   liquids: [
-    iodide/1
+    iodide/0.4
   ]
 }
 requirements: [

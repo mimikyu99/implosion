@@ -11,7 +11,7 @@ consumes: {
 }
 
 outputLiquids: [
-    iodide/0.3
+    iodide/0.2
 ],
 
 category: crafting
