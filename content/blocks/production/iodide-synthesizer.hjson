@@ -1,22 +1,26 @@
 type: GenericCrafter
-size: 3
+size: 2
 craftEffect: "producesmoke"
 squareSprite: false
-craftTime: 60
+craftTime: 40
+
 consumes: {
   items: [
-    carbon/5
-    sand/1
+    carbon/2
     ]
 }
-outputItem: carbon-fiber/1
+
+outputLiquids: [
+    iodide/0.1
+],
+
 category: crafting
 researchCostMultiplier: 0.5
-research: coal-purifier
+research: core-crab
+
 requirements: [
-  carbon/30
-  beryllium/40
   silver/70
+  beryllium/40
 ]
 ambientSound: hum
 ambientSoundVolume: 1

@@ -1,6 +1,4 @@
 type: GenericCrafter
-name: Petroleum cracker
-description: Transforms oil into iodide by cracking it.
 size: 4
 craftEffect: "producesmoke"
 squareSprite: false
@@ -28,7 +26,7 @@ drawer: {
 
 
 outputLiquids: [
-    iodide/0.1
+    iodide/0.4
 ],
 category: crafting
 researchCostMultiplier: 0.5
