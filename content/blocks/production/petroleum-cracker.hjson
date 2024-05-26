@@ -19,16 +19,16 @@ drawer: {
         type: DrawDefault
     }
     {
-      type: DrawGlowRegion.
+      type: DrawLiquidRegiom.
       suffix: "-glow",
-      color: 65497c
+      liquid: iodide,
     }
   ]
 }
 
 
 outputLiquids: [
-    iodide/0.6
+    iodide/0.1
 ],
 category: crafting
 researchCostMultiplier: 0.5
