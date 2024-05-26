@@ -13,4 +13,4 @@ Explore a new planet: **europa**, an underwater world infested by mechanical and
 
 # Socials
 you can see our [trello](https://trello.com/invite/b/lZ9qBqhg/ATTI6391bef7ad11ff64bfad07c7489ed8424C563CD3/implosion)
-or contact us on discord: orange0330. and norax.2
+or contact us on discord: mimikyu99.9 and norax.2
