@@ -3,5 +3,5 @@ name:"iodide"
 hardness: 1.5
   cost:1.5
   alwaysUnlocked:false
-  color: 424242
+  color: color:
 research: "carbon"
