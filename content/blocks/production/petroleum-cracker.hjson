@@ -17,12 +17,12 @@ drawer: {
   drawers: [
     {
       type: DrawGlowRegion.
-      suffix: -liquid,
+      suffix: "-liquid",
       color: 65497c
     },
     {
       type: DrawFlame,
-      flameColor: 74C2E8FF,
+      flameColor: E25822,
       flameRadius: 7.2,
       flameRadiusIn: 4.0,
       flameRadiusScl: 6.5,
