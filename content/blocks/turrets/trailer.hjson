@@ -10,8 +10,8 @@ requirements: [
 ]
 shoot: {
   type: "ShootAlternate"
-  shots: 1
-  spread: 4
+  shots: 2
+  spread: 6
   shotDelay: 1
 }
 coolant: {
@@ -50,6 +50,54 @@ ammoTypes: {
     damage: 30
   }
 }
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: drawPartRegion
+            suffix: -barrel
+            mirror: false
+            progress: recoil
+            moveY: -2.5
+        }
+{
+            type: drawPartRegion
+            suffix: -barrel2
+            mirror: false
+            progress: recoil
+            moveY: -2.5
+        }
+        {
+            type: drawPartRegion
+            suffix: -sides
+            mirror: false
+            progress: recoil
+            moveY: -3
+            moves: [
+                {
+                    progress: warmup
+                    y: -1
+                }
+            ]
+        }
+        {
+            type: drawPartRegion
+            suffix: -mid
+            mirror: true
+            progress: recoil
+            moveY: -4.5
+            moves: [
+                {
+                    progress: warmup
+                    x: -1.5
+                    y: -1.5
+                    rot: -5
+                }
+            ]
+        }
+    ]
+}
+envEnabled: 4
 base: "trailer-base"
 
    
