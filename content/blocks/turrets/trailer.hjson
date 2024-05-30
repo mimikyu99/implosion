@@ -83,7 +83,7 @@ drawer: {
         {
             type: drawPartRegion
             suffix: -mid
-            mirror: true
+            mirror: false
             progress: recoil
             moveY: -4.5
             moves: [
