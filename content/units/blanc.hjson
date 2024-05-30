@@ -26,7 +26,7 @@ weapons: [
     rotate: true
     inaccuracy: 5
     bullet: {
-      damage: 20
+      damage: 40
       speed: 4
       drag: 0
       type: basicBulletType
