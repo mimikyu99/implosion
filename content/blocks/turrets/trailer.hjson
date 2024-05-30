@@ -58,6 +58,7 @@ drawer: {
             suffix: -barrel
             mirror: false
             progress: recoil
+recoilIndex:1
             moveY: -2.5
         }
 {
@@ -65,6 +66,7 @@ drawer: {
             suffix: -barrel2
             mirror: false
             progress: recoil
+recoilIndex:2
             moveY: -2.5
         }
         {
@@ -89,9 +91,9 @@ drawer: {
             moves: [
                 {
                     progress: warmup
-                    x: -1.5
+                
                     y: -1.5
-                    rot: -5
+          
                 }
             ]
         }
