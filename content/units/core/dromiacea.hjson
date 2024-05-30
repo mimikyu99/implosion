@@ -14,7 +14,7 @@
   buildSpeed: 1
   itemCapacity: 20
   alwaysUnlocked: true
-  outlineColor: "42413e"
+  outlineColor: "191919"
   propulsorSize: 2
 
   trailChance: -1
