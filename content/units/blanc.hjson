@@ -1,6 +1,6 @@
 type: legs
 speed: 0.6
-health: 170
+health: 240
 armor: 1
 flying: false
 legExtension: -4
