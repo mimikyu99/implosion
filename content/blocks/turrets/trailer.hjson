@@ -3,6 +3,7 @@ name: "Trailer"
 size: 2
 health: 800
 reload: 55
+recoil:4
 requirements: [
   carbon/50
   silver/25
