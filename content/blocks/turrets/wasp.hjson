@@ -12,7 +12,7 @@ requirements: [
 ]
 shoot: {
   shots: 12
-  shotDelay: 1
+  shotDelay: 0.1
 }
 coolant: {
   type: "ConsumeCoolant"
@@ -20,7 +20,7 @@ coolant: {
   allowLiquid: true
   amount: 0.3
 }
-inaccuracy: 1
+inaccuracy: 6
 range: 200
 category: "turret"
 shootSound: "shoot"
@@ -39,8 +39,8 @@ targetAir: false
 ammoTypes: {
  carbon-fiber : {
     bulletType: "BasicBulletType"
-    width: 8
-    height: 8
+    width: 13
+    height: 13
     sprite: "implosion-silver-bullet"
     speed: 2
     knockback: 0.1
@@ -48,7 +48,7 @@ ammoTypes: {
     collidesGround: true
     collidesAir: true
     ammoMultiplier: 1
-    damage: 15
+    damage: 3
   }
 }
 drawer: {
