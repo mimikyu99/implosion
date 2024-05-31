@@ -20,7 +20,7 @@ coolant: {
   allowLiquid: true
   amount: 0.3
 }
-inaccuracy: 6
+inaccuracy: 20
 range: 200
 category: "turret"
 shootSound: "shoot"
@@ -42,13 +42,13 @@ ammoTypes: {
     width: 13
     height: 13
     sprite: "implosion-silver-bullet"
-    speed: 2
-    knockback: 0.1
+    speed: 5
+    knockback: 0.4
     lifeTime: 133
     collidesGround: true
     collidesAir: true
     ammoMultiplier: 1
-    damage: 3
+    damage: 6
   }
 }
 drawer: {
