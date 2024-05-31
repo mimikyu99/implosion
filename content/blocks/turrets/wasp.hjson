@@ -39,8 +39,8 @@ targetAir: false
 ammoTypes: {
  carbon-fiber : {
     bulletType: "BasicBulletType"
-    width: 13
-    height: 13
+    width: 22
+    height: 22
     sprite: "implosion-silver-bullet"
     speed: 5
     knockback: 0.4
