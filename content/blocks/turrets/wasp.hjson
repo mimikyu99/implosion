@@ -1,0 +1,81 @@
+type: "ItemTurret"
+name: "Wasp"
+size: 3
+health: 950
+reload: 70
+recoil:6
+requirements: [
+  carbon/70
+  coal/30
+  silver/45
+  carbon-fiber/50
+]
+shoot: {
+  shots: 12
+  shotDelay: 1
+}
+coolant: {
+  type: "ConsumeCoolant"
+  allowGas: true
+  allowLiquid: true
+  amount: 0.3
+}
+inaccuracy: 1
+range: 200
+category: "turret"
+shootSound: "shoot"
+outlineColor: "42413e"
+research: {
+  parent: "core-crab"
+  requirements: [
+    carbon/440
+    coal/200
+    silver/340
+    carbon-fiber/560
+  ]
+}
+targetGround: true
+targetAir: false
+ammoTypes: {
+ carbon-fiber : {
+    bulletType: "BasicBulletType"
+    width: 8
+    height: 8
+    sprite: "implosion-silver-bullet"
+    speed: 2
+    knockback: 0.1
+    lifeTime: 133
+    collidesGround: true
+    collidesAir: true
+    ammoMultiplier: 1
+    damage: 15
+  }
+}
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: drawPartRegion
+            suffix: -barrel
+            mirror: false
+            progress: recoil
+            moveY: -2.5
+}
+        {
+            type: drawPartRegion
+            suffix: -sides
+            mirror: false
+            progress: recoil
+            moveY: -3
+            moves: [
+                {
+                    progress: warmup
+                    y: -1
+                }
+            ]
+        }
+    ]
+}
+base: "trailer-base"
+
+   
