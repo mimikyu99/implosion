@@ -82,21 +82,6 @@ recoilIndex:2
                 }
             ]
         }
-        {
-            type: drawPartRegion
-            suffix: -mid
-            mirror: false
-            progress: recoil
-            moveY: -4.5
-            moves: [
-                {
-                    progress: warmup
-                
-                    y: -1.5
-          
-                }
-            ]
-        }
     ]
 }
 base: "trailer-base"
