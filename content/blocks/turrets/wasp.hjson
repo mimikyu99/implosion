@@ -63,6 +63,13 @@ drawer: {
 }
         {
             type: drawPartRegion
+            suffix: -mid
+            mirror: false
+            progress: recoil
+            moveY: -2.2
+}
+        {
+            type: drawPartRegion
             suffix: -sides
             mirror: false
             progress: recoil
