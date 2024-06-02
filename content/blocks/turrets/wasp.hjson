@@ -58,7 +58,7 @@ drawer: {
             suffix: -barrel
             mirror: false
             progress: recoil
-            moveY: -2.5
+            moveY: -4
 }
         {
             type: drawPartRegion
@@ -72,7 +72,7 @@ drawer: {
             suffix: -sides
             mirror: false
             progress: recoil
-            moveY: -3
+            moveY: 2
             moves: [
                 {
                     progress: warmup
