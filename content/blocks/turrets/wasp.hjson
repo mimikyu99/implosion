@@ -2,7 +2,7 @@ type: "ItemTurret"
 name: "Wasp"
 size: 3
 health: 950
-reload: 70
+reload: 60
 recoil:6
 requirements: [
   carbon/70
@@ -11,7 +11,7 @@ requirements: [
 ]
 shoot: {
   shots: 12
-  shotDelay: 0.1
+  shotDelay: 0
 }
 coolant: {
   type: "ConsumeCoolant"
@@ -20,7 +20,7 @@ coolant: {
   amount: 0.3
 }
 inaccuracy: 20
-range: 200
+range: 160
 category: "turret"
 shootSound: "shoot"
 outlineColor: "42413e"
@@ -28,7 +28,6 @@ research: {
   parent: "core-crab"
   requirements: [
     carbon/440
-    coal/200
     silver/340
     carbon-fiber/560
   ]
@@ -58,7 +57,7 @@ drawer: {
             suffix: -barrel
             mirror: false
             progress: recoil
-            moveY: -8
+            moveY: -6
 }
         {
             type: drawPartRegion
@@ -82,6 +81,6 @@ drawer: {
         }
     ]
 }
-base: "trailer-base"
+base: "wasp-base"
 
    
