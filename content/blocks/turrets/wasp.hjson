@@ -6,7 +6,6 @@ reload: 70
 recoil:6
 requirements: [
   carbon/70
-  coal/30
   silver/45
   carbon-fiber/50
 ]
