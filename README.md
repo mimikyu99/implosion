@@ -1,16 +1,5 @@
-<div align="center" style="border-bottom: none;">
-    <img  alt="Issues"  src="https://img.shields.io/github/issues/0rang30rang3/implosion?style=for-the-badge&logo=gitbook&color=B5E8E0&logoColor=D9E0EE&labelColor=302D41">
-    <a href="https://github.com/catppuccin/catppuccin/stargazers">
-    <img src="https://img.shields.io/github/stars/0rang30rang3/implosion?colorA=363a4f&colorB=b7bdf8&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4KPHBhdGggZD0iTTIzNS4yNCw4NC4zOGwtMjguMDYsMjMuNjgsOC41NiwzNS4zOWExMy4zNCwxMy4zNCwwLDAsMS01LjA5LDEzLjkxLDEzLjU0LDEzLjU0LDAsMCwxLTE1LC42OUwxNjQsMTM5bC0zMS42NSwxOS4wNmExMy41MSwxMy41MSwwLDAsMS0xNS0uNjksMTMuMzIsMTMuMzIsMCwwLDEtNS4xLTEzLjkxbDguNTYtMzUuMzlMOTIuNzYsODQuMzhhMTMuMzksMTMuMzksMCwwLDEsNy42Ni0yMy41OGwzNi45NC0yLjkyLDE0LjIxLTMzLjY2YTEzLjUxLDEzLjUxLDAsMCwxLDI0Ljg2LDBsMTQuMjEsMzMuNjYsMzYuOTQsMi45MmExMy4zOSwxMy4zOSwwLDAsMSw3LjY2LDIzLjU4Wk04OC4xMSwxMTEuODlhOCw4LDAsMCwwLTExLjMyLDBMMTguMzQsMTcwLjM0YTgsOCwwLDAsMCwxMS4zMiwxMS4zMmw1OC40NS01OC40NUE4LDgsMCwwLDAsODguMTEsMTExLjg5Wm0tLjUsNjEuMTlMMzQuMzQsMjI2LjM0YTgsOCwwLDAsMCwxMS4zMiwxMS4zMmw1My4yNi01My4yN2E4LDgsMCwwLDAtMTEuMzEtMTEuMzFabTczLTEtNTQuMjksNTQuMjhhOCw4LDAsMCwwLDExLjMyLDExLjMybDU0LjI4LTU0LjI4YTgsOCwwLDAsMC0xMS4zMS0xMS4zMloiIHN0eWxlPSJmaWxsOiAjQ0FEM0Y1OyIvPgo8L3N2Zz4="></a>
-  
-
-  
-</div>
-
-# Implosion
-Explore a new planet: **europa**, an underwater world infested by mechanical and natural invaders. Forget the classic gameplay of Erekir and Serpulo as you try to eradicate the enemy presence of the abyss team while harnessing the power of the enervine, an invasive specie that was possibly genetically modified in an abandoned facility that you can explore. Plentiful new game mechanics are introduced in a fully-fledged campaign that can be completed with 3 (offense) + 1 (mining) unit trees each having unique characteristics.
-
-# Building
+# Mindustry Java Mod Template
+A Java Mindustry mod template that works on Android and PC. The Kotlin version of this mod can be seen [here](https://github.com/Anuken/MindustryKotlinModTemplate).
 
 ## Building for Desktop Testing
 
@@ -19,13 +8,32 @@ Explore a new planet: **europa**, an underwater world infested by mechanical and
 3. Your mod jar will be in the `build/libs` directory. **Only use this version for testing on desktop. It will not work with Android.**
 To build an Android-compatible version, you need the Android SDK. You can either let Github Actions handle this, or set it up yourself. See steps below.
 
+## Building through Github Actions
+
+This repository is set up with Github Actions CI to automatically build the mod for you every commit. This requires a Github repository, for obvious reasons.
+To get a jar file that works for every platform, do the following:
+1. Make a Github repository with your mod name, and upload the contents of this repo to it. Perform any modifications necessary, then commit and push. 
+2. Check the "Actions" tab on your repository page. Select the most recent commit in the list. If it completed successfully, there should be a download link under the "Artifacts" section. 
+3. Click the download link (should be the name of your repo). This will download a **zipped jar** - **not** the jar file itself [2]! Unzip this file and import the jar contained within in Mindustry. This version should work both on Android and Desktop.
+
 ## Building Locally
 
 Building locally takes more time to set up, but shouldn't be a problem if you've done Android development before.
 1. Download the Android SDK, unzip it and set the `ANDROID_HOME` environment variable to its location.
 2. Make sure you have API level 30 installed, as well as any recent version of build tools (e.g. 30.0.1)
-3. Add a build-tools folder to your PATH. For example, if you have `30.0.1` installed, that would be `$ANDROID_HOME/build-tools/30.0.1`.
-4. Run `gradlew deploy`. If you did everything correctlly, this will create a jar file in the `build/libs` directory that can be run on both Android and desktop.
-# Socials
-you can see our [trello](https://trello.com/invite/b/lZ9qBqhg/ATTI6391bef7ad11ff64bfad07c7489ed8424C563CD3/implosion)
-or contact us on discord: https://discord.gg/aHwn7Mrwge
+3. Add a build-tools folder to your PATH. For implosion, if you have `30.0.1` installed, that would be `$ANDROID_HOME/build-tools/30.0.1`.
+4. Run `gradlew deploy`. If you did everything correctlly, this will create a jar file in the `build/libs` directory that can be run on both Android and desktop. 
+
+## Adding Dependencies
+
+Please note that all dependencies on Mindustry, Arc or its submodules **must be declared as compileOnly in Gradle**. Never use `implementation` for core Mindustry or Arc dependencies. 
+
+- `implementation` **places the entire dependency in the jar**, which is, in most mod dependencies, very undesirable. You do not want the entirety of the Mindustry API included with your mod.
+- `compileOnly` means that the dependency is only around at compile time, and not included in the jar.
+
+Only use `implementation` if you want to package another Java library *with your mod*, and that library is not present in Mindustry already.
+
+--- 
+
+*[1]* *On Linux/Mac it's `./gradlew`, but if you're using Linux I assume you know how to run executables properly anyway.*  
+*[2]: Yes, I know this is stupid. It's a Github UI limitation - while the jar itself is uploaded unzipped, there is currently no way to download it as a single file.*

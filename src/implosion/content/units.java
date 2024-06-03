@@ -1,4 +1,4 @@
 package implosion.content;
 
-public class planets {
+public class units {
 }
