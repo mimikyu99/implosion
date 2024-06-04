@@ -5,7 +5,7 @@ displayName: "Implosion"
 name: "implosion"
 
 #your name
-author: "You"
+author: "Norax"
 
 #the fully qualified main class of the mod
 main: "implosion.implosion"
