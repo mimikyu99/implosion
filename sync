@@ -1,11 +1,12 @@
 #!/usr/bin/bash
-
+clear
 MINDUSTRY_PATH="/home/norax/.local/share/Mindustry/mods"
 LAUNCHER="/home/norax/GOG Games/mindustry/start.sh"
 
-
 ./gradlew build
-cp build/libs/* "$MINDUSTRY_PATH"
+RESULT=$?
 
-
-"$LAUNCHER" --version relase
+if [ $RESULT -eq 0 ]; then
+    cp build/libs/* "$MINDUSTRY_PATH"
+    "$LAUNCHER" --version relase
+fi
