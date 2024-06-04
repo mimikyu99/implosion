@@ -12,7 +12,7 @@ import mindustry.world.draw.*;
 import static mindustry.type.ItemStack.*;
 
 public class power {
-    public static Block IodideReactor;
+    public static Block IodideReactor ;
 
     public static void loadContent() {
         IodideReactor = new ConsumeGenerator("iodide-reactor"){{
@@ -38,5 +38,15 @@ public class power {
 
             );
         }};
+        PowerConductor = new LightningPowerNode("power-conductor", 0) {{
+            requirements(Category.power, with(ImplosionItems.silver, 5));
+            
+            consumePowerBuffered(5000f);
+            lightningRange = 0;
+            thresholdPerTile = 0.1f;
+        }};
+        
+
+        
     };
 }
