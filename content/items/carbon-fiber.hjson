@@ -1,7 +1,0 @@
-name:"Carbon Fiber"
-  description: "Carefully weaved Carbon through a Carbon Fiber Synthesizer, this is an insanely useful material with many uses."
-hardness: 1.5
-  cost:2
-  alwaysUnlocked:true
-  color: 333333
-research: "carbon"

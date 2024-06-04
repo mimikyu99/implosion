@@ -1,4 +1,0 @@
-type: OreBlock
-  name: Silver Ore
-itemDrop: silver
-  variants: 3

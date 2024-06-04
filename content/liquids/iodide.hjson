@@ -1,7 +1,0 @@
-name:"iodide"
-  description: "a common carbon based gas,extremely hot."
-hardness: 1.5
-  cost:1.5
-  alwaysUnlocked:false
-  color: 65497c:
-research: "carbon"

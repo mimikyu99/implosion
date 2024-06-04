@@ -1,5 +1,0 @@
-type: Floor
-localizedName: Coast sand
-variants: 1
-itemDrop: sand
-playerUnmineable: true

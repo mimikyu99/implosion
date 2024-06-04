@@ -1,9 +1,0 @@
-type: LiquidRouter
-size: 2
-hasLiquids: true
-liquidCapacity: 1200
-category: liquid
-requirements: [
-    silver/99999
-]
-editorOnly: true
