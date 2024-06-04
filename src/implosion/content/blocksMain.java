@@ -8,5 +8,6 @@ public class blocksMain {
         distribution.loadContent();
         production.loadContent();
         env.loadContent();
+        turrets.loadContent();
     };
 }

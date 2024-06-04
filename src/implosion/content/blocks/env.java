@@ -63,8 +63,9 @@ public class env {
         TarFloor = new Floor("tar-floor", 3);
 
         //ore//
-        ImplosionCoalOre = new Floor("implosion-coal-ore-",3) {{
+        ImplosionCoalOre = new Floor("imp-coal",3) {{
             playerUnmineable = true;
+
             itemDrop = Items.coal;
         }};
 
