@@ -16,6 +16,7 @@ public class storage {
 
         CoreCrab = new CoreBlock("core-crab") {{
             health = 550;
+            size = 3;
             alwaysUnlocked = true;
             isFirstTier = true;
             itemCapacity = 500;
