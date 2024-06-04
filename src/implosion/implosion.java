@@ -10,6 +10,7 @@ public class implosion extends Mod{
     public void loadContent(){
         Log.info("Loading some example content.");
         ImplosionItems.loadContent();
+        ImplosionLiquids.loadContent();
         ImplosionUnits.loadContent();
         blocksMain.loadContent();
         planets.loadContent();

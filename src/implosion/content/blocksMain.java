@@ -10,5 +10,6 @@ public class blocksMain {
         production.loadContent();
         env.loadContent();
         turrets.loadContent();
+        power.loadContent();
     };
 }

@@ -5,7 +5,8 @@ import arc.graphics.*;
 public class ImplosionLiquids {
     public static Liquid iodide;
 
-    public void loadContent() {
-        iodide = new Liquid("iodide", Color.valueOf("#ffff"));
+    public static void loadContent() {
+        iodide = new Liquid("iodide", Color.valueOf("#bf7d5a"));
     }
 }
+
