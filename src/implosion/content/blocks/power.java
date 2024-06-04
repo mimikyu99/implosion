@@ -38,7 +38,7 @@ public class power {
 
             );
         }};
-        PowerConductor = new LightningPowerNode("power-conductor", 0) {{
+        PowerConductor = new PowerNode("power-conductor", 0) {{
             requirements(Category.power, with(ImplosionItems.silver, 5));
             
             consumePowerBuffered(5000f);
