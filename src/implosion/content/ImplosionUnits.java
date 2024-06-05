@@ -72,9 +72,7 @@ public class ImplosionUnits {
                                 inaccuracy = 3f;
                             }};
                         }});
-            }};
-
-        //spooder tree//
+                        //spooder tree//
         blanc = new MechUnitType("blanc"){{
             hidden = false;
             speed = 0.8f;
@@ -126,4 +124,5 @@ public class ImplosionUnits {
                 }};
             }});
          }};
-}
+     }};
+
