@@ -41,7 +41,7 @@ public class blocksMain {
     // Distribution
     public static Block ItemTransporter, ItemTransporterRouter;
 
-    // Defense
+    // 
     public static Block SilverWall, SilverWallLarge,
 
     // Storage
@@ -182,12 +182,12 @@ public class blocksMain {
 
         // Defense
         SilverWall = new Wall("silver-wall") {{
-            requirements(Category.defense, with(ImplosionItems.silver, 6));
-            health = 90;
+            requirements(Category.defense, with(ImplosionItems.silver, 18));
+            health = 300;
         }};
         SilverWallLarge = new Wall("silver-wall-large") {{
-            requirements(Category.defense, with(ImplosionItems.silver, 6));
-            health = 90;
+            requirements(Category.defense, with(ImplosionItems.silver, 24));
+            health = 600;
             size = 2;
         }};
 
