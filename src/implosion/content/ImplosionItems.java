@@ -9,8 +9,8 @@ public class ImplosionItems {
     public static final Seq<Item> ImplosionItems = new Seq<>();
 
     public static void loadContent() {
-        silver = new Item("silver", Color.valueOf("#bf7d5a"));
-        carbon = new Item("carbon", Color.valueOf("#bf7d5a"));
-        CarbonFiber = new Item("carbon-fiber", Color.valueOf("#bf7d5a"));
+        silver = new Item("silver", Color.valueOf("#9b9b9b"));
+        carbon = new Item("carbon", Color.valueOf("#4a4a4a"));
+        CarbonFiber = new Item("carbon-fiber", Color.valueOf("#2c2a2b"));
     }
 }
