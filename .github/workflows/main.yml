@@ -33,43 +33,27 @@ jobs:
           name: ${{ github.event.repository.name }}
           path: build/libs/${{ github.event.repository.name }}.jar
 
-      - name: Get current date and time
-        id: date
-        run: echo "::set-output name=now::$(date +'%m-%d-%H')"
-
-      - name: Install GitHub CLI
-        run: sudo apt-get install -y gh
-
-      - name: Delete existing release and tag
+      - name: Delete all releases and tags
         run: |
-          if gh release view A; then
-            gh release delete A -y
-          fi
-          if git rev-parse refs/tags/A; then
-            git tag -d A
-            git push origin :refs/tags/A
-          fi
+          gh release list --limit 100 | awk '{print $1}' | xargs -I {} gh release delete {} -y
+          git tag -l | xargs -n 1 git push --delete origin
+          git tag -l | xargs -n 1 git tag -d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Create new tag
+        run: |
+          NEW_TAG=$(date +'%m-%d-%H-%M')
+          git tag $NEW_TAG
+          git push origin $NEW_TAG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: A
-          release_name: ${{ steps.date.outputs.now }}
-          draft: false
-          prerelease: false
 
-      - name: Upload jar to Release
-        uses: actions/upload-release-asset@v1
+      - name: Create new release
+        run: |
+          NEW_TAG=$(date +'%m-%d-%H-%M')
+          gh release create $NEW_TAG build/libs/${{ github.event.repository.name }}.jar --title "Latest release" --latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/libs/${{ github.event.repository.name }}.jar
-          asset_name: ${{ github.event.repository.name }}.jar
-          asset_content_type: application/java-archive
+
 
