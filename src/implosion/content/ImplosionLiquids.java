@@ -6,7 +6,7 @@ public class ImplosionLiquids {
     public static Liquid iodide;
 
     public static void loadContent() {
-        iodide = new Liquid("iodide", Color.valueOf("#bf7d5a"));
+        iodide = new Liquid("iodide", Color.valueOf("#c555b0"));
     }
 }
 
