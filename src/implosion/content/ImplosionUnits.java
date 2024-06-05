@@ -125,5 +125,5 @@ public class ImplosionUnits {
                     frontColor = Pal.thoriumPink;
                 }};
             }});
-    };
+         }};
 }
