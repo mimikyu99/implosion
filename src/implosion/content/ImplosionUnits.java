@@ -71,56 +71,7 @@ public class ImplosionUnits {
         }};
 
         //spooder tree//
-        Blanc = new MechUnitType("blanc") {{
-            hidden = false;
-            speed = 0.8f;
-            health = 280f;
-            splittable = true;
-            chainable = true;
-            omniMovement = false;
-            angleLimit = 65f;
-            segmentLength = 5;
-            segmentDamageScl = 8f;
-            segmentCast = 8;
-            segmentOffset = 7.3f;
-            maxSegments = 4;
-            preventDrifting = true;
-
-            legCount = 6;
-            legLength = 7f;
-            lockLegBase = true;
-            legContinuousMove = true;
-            legExtension = -2f;
-            legBaseOffset = 3f;
-            legMaxLength = 1.3f;
-            legMinLength = 0.2f;
-            legLengthScl = 0.86f;
-            legForwardScl = 0.8f;
-            legGroupSize = 2;
-            rippleScale = 0.3f;
-
-            legMoveSpace = 2.3f;
-            allowLegStep = true;
-            hovering = false;
-            legPhysicsLayer = true;
-
-            segWeapSeq.add(new Weapon("blanc-shoot") {{
-                top = true;
-                rotate = true;
-                mirror = false;
-                reload = 55f;
-                autoTarget = true;
-                controllable = false;
-                bullet = new BasicBulletType(5f, 7) {{
-                    maxRange = 40f;
-                    collidesTiles = collidesAir = collidesGround = true;
-                    width = height = 11f;
-                    splashDamage = 25f;
-                    splashDamageRadius = 25f;
-                    trailColor = hitColor = lightColor = backColor = Pal.thoriumPink;
-                    frontColor = Pal.thoriumPink;
-                }};
-            }});
-        }};
+        // TODO: bring back blanc
+    
     }
 }
