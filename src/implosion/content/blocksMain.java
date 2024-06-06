@@ -173,7 +173,14 @@ public class blocksMain {
             variants = 3;
         }};
         ShallowFloor = new Floor("shallow", 3);
+        ShallowWall = new StaticWall("shallow-wall") {{
+            variants = 3;
+        }};
+
         TarFloor = new Floor("tar-floor", 3);
+        TarWall = new StaticWall("tar-wall") {{
+            variants = 3;
+        }};
 
         SilverOre = new OreBlock("ore-silver", ImplosionItems.silver);
         ImplosionCoalOre = new OreBlock("imp-coal-ore", Items.coal) {{
