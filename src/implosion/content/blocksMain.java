@@ -1,26 +1,31 @@
 package implosion.content;
 
+import implosion.addictions.PowerConductor;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
 import mindustry.entities.part.RegionPart;
 import mindustry.gen.Bullet;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
+import mindustry.type.Item;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.distribution.Duct;
 import mindustry.world.blocks.distribution.Router;
 import mindustry.world.blocks.environment.Floor;
+import mindustry.world.blocks.environment.OreBlock;
 import mindustry.world.blocks.environment.StaticWall;
 import mindustry.world.blocks.power.ConsumeGenerator;
 import mindustry.world.blocks.power.PowerNode;
+import mindustry.world.blocks.production.Drill;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.storage.CoreBlock;
 import mindustry.world.draw.*;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.Effect;
 import mindustry.world.meta.Attribute;
+import mindustry.world.meta.Env;
 
 import static mindustry.type.ItemStack.with;
 
@@ -30,18 +35,18 @@ public class blocksMain {
     public static Bullet TrailerBullet;
 
     // Production
-    public static Block FiberSynthesizer, CoalMixer, PetroleumCracker;
+    public static Block FiberSynthesizer, CoalMixer, PetroleumCracker, PressureDrill;
 
     // Power
     public static Block IodideReactor, PowerConductor;
 
     // Environment
-    public static Block CoastSand, CoastWall, ColdSeepsFloor, ColdSeepsWall, NeriticFloor, NeriticWall, ShallowFloor, TarFloor, Kelp, ImplosionCoalOre, SilverOre;
+    public static Block CoastSand, CoastWall, ColdSeepsFloor, ColdSeepsWall, NeriticFloor, NeriticWall, ShallowFloor,ShallowWall, TarFloor,TarWall, Kelp, ImplosionCoalOre, SilverOre;
 
     // Distribution
     public static Block ItemTransporter, ItemTransporterRouter;
 
-    // 
+    // Defense
     public static Block SilverWall, SilverWallLarge,
 
     // Storage
@@ -93,6 +98,15 @@ public class blocksMain {
         }};
 
         // Production
+
+        PressureDrill = new Drill("pressure-drill") {{
+            requirements(Category.production, with(ImplosionItems.silver, 12));
+            tier = 2;
+            drillTime = 740;
+            size = 2;
+
+            consumeLiquid(ImplosionLiquids.fluorine, 0.05f).boost();
+        }};
         FiberSynthesizer = new GenericCrafter("fiber-synthesizer") {{
             scaledHealth = 120;
             size = 3;
@@ -136,7 +150,7 @@ public class blocksMain {
             drawer = new DrawMulti(new DrawRegion("-liquid"), new DrawLiquidTile(), new DrawDefault());
         }};
 
-        PowerConductor = new PowerNode("power-conductor") {{
+        PowerConductor = new PowerConductor("power-conductor") {{
             requirements(Category.power, with(ImplosionItems.silver, 100, Items.beryllium, 70, ImplosionItems.CarbonFiber, 60));
             consumePower(1F);
         }};
@@ -160,14 +174,11 @@ public class blocksMain {
         }};
         ShallowFloor = new Floor("shallow", 3);
         TarFloor = new Floor("tar-floor", 3);
-        ImplosionCoalOre = new Floor("imp-coal", 3) {{
-            playerUnmineable = true;
-            itemDrop = Items.coal;
-        }};
-        SilverOre = new Floor("ore-silver", 3) {{
-            itemDrop = ImplosionItems.silver;
-        }};
 
+        SilverOre = new OreBlock("ore-silver", ImplosionItems.silver);
+        ImplosionCoalOre = new OreBlock("imp-coal-ore", Items.coal) {{
+            playerUnmineable = true;
+        }};
         // Distribution
         ItemTransporter = new Duct("item-transporter") {{
             health = 5;
