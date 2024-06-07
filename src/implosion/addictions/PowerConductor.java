@@ -33,7 +33,6 @@ public class PowerConductor extends PowerNode {
         if(maxNodes == 0) laserRange = lightningRange / tilesize;
     }
 
-
     @Override
     public void setBars() {
         super.setBars();
