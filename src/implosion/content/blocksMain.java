@@ -197,12 +197,12 @@ public class blocksMain {
 
         ItemTransporterRouter = new Router("item-transporter-router") {{
             health = 30;
-            requirements(Category.distribution, with(ImplosionItems.silver, 10));
+            requirements(Category.distribution, with(ImplosionItems.silver, 3));
         }};
 
         ItemTransporterJunction = new Junction("item-transporter-junction") {{
             health = 10;
-            requirements(Category.distribution, with(ImplosionItems.silver, 10));
+            requirements(Category.distribution, with(ImplosionItems.silver, 3));
         }};
 
         // Defense
