@@ -22,58 +22,56 @@ public class ImplosionUnits {
             Scout;
 
     public static void loadContent() {
+        Dromiacea = new UnitType("dromiacea") {{
+            aiController = BuilderAI::new;
+            constructor = UnitEntity::create;
 
+            flying = true;
+            isEnemy = false;
 
-        Dromiacea = new UnitType("dromiacea") {
-            {
-                aiController = BuilderAI::new;
-                constructor = UnitEntity::create;
+            health = 100f;
+            armor = 2f;
+            hitSize = 2f;
+            itemCapacity = 40;
 
-                flying = true;
-                isEnemy = false;
+            speed = 3f;
+            canBoost = false;
+            boostMultiplier = .75f;
 
+            buildSpeed = .25f;
+            buildRange = 150f;
 
-                health = 100f;
-                armor = 2f;
-                hitSize = 2f;
-                itemCapacity = 40;
+            canAttack = true;
+            mineSpeed = 2f;
+            mineTier = 0;
+            mineFloor = true;
+            mineWalls = true;
 
-                speed = 3f;
-                canBoost = false;
-                boostMultiplier = .75f;
+            coreUnitDock = true;
+            createScorch = false;
 
-                buildSpeed = .25f;
-                buildRange = 150f;
+            weapons.add(new Weapon() {{
+                x = y = 0f;
+                mirror = false;
+                reload = 20f;
+                soundPitchMin = 0.9f;
+                shootSound = Sounds.shoot;
+                shoot.shots = 2;
+                bullet = new BasicBulletType() {{
+                    lifetime = 45f;
+                    frontColor = Color.valueOf("ffffff");
+                    shake = 0.5f;
+                    width = 6.5f;
+                    height = 7.5f;
+                    speed = 3f;
+                    keepVelocity = false;
+                    inaccuracy = 3f;
+                }};
+            }});
+        }};
 
-                canAttack = true;
-                mineSpeed = 2f;
-                mineTier = 0;
-                mineFloor = true;
-                mineWalls = true;
-
-                coreUnitDock = true;
-                createScorch = false;
-                weapons.add(
-                        new Weapon() {{
-                            x = y = 0f;
-                            mirror = false;
-                            reload = 20f;
-                            soundPitchMin = 0.9f;
-                            shootSound = Sounds.shoot;
-                            shoot.shots = 2;
-                            bullet = new BasicBulletType() {{
-                                lifetime = 45f;
-                                frontColor = Color.valueOf("ffffff");
-                                shake = 0.5f;
-                                width = 6.5f;
-                                height = 7.5f;
-                                speed = 3f;
-                                keepVelocity = false;
-                                inaccuracy = 3f;
-                            }};
-                        }});
-            }};
-
-        //spoder tree//
-    };
+        //spooder tree//
+        // TODO: bring back blanc
+    
+    }
 }
