@@ -18,15 +18,16 @@ jobs:
           sed -i 's/\r//' ./gradlew
           chmod +x ./gradlew
           ./gradlew deploy -Pcommit=$(git rev-parse --short "$GITHUB_SHA")
+          
       - name: Get current time
         run: echo "RELEASE_TAG=$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
-        - name: Install GitHub CLI
-  run: |
-    curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-    && chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-    && apt-get update \
-    && apt-get install gh -y
+      - name: Install GitHub CLI
+        run: |
+            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \  
+            && chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+            && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+            && apt-get update \
+            && apt-get install gh -y
       - name: Delete old releases
         run: |
           gh release delete --yes $(gh release list --limit 999999 --json name --jq '.[].name')
