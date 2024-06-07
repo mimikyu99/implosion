@@ -12,6 +12,7 @@ import mindustry.world.Block;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.distribution.Duct;
+import mindustry.world.blocks.distribution.Junction;
 import mindustry.world.blocks.distribution.Router;
 import mindustry.world.blocks.environment.Floor;
 import mindustry.world.blocks.environment.OreBlock;
@@ -44,7 +45,7 @@ public class blocksMain {
     public static Block CoastSand, CoastWall, ColdSeepsFloor, ColdSeepsWall, NeriticFloor, NeriticWall, ShallowFloor,ShallowWall, TarFloor,TarWall, Kelp, ImplosionCoalOre, SilverOre;
 
     // Distribution
-    public static Block ItemTransporter, ItemTransporterRouter;
+    public static Block ItemTransporter, ItemTransporterRouter, ItemTransporterJunction;
 
     // Defense
     public static Block SilverWall, SilverWallLarge,
@@ -186,16 +187,22 @@ public class blocksMain {
         ImplosionCoalOre = new OreBlock("imp-coal-ore", Items.coal) {{
             playerUnmineable = true;
         }};
+
         // Distribution
         ItemTransporter = new Duct("item-transporter") {{
-            health = 5;
+            health = 20;
             speed = 5.6f;
             requirements(Category.distribution, with(ImplosionItems.silver, 2));
         }};
 
         ItemTransporterRouter = new Router("item-transporter-router") {{
+            health = 30;
+            requirements(Category.distribution, with(ImplosionItems.silver, 10));
+        }};
+
+        ItemTransporterJunction = new Junction("item-transporter-junction") {{
             health = 10;
-            requirements(Category.distribution, with(ImplosionItems.silver, 5));
+            requirements(Category.distribution, with(ImplosionItems.silver, 10));
         }};
 
         // Defense
