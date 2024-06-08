@@ -184,7 +184,7 @@ public class blocksMain {
         }};
 
         SilverOre = new OreBlock("ore-silver", ImplosionItems.silver);
-        ImplosionCoalOre = new OreBlock("imp-coal-ore", Items.coal) {{
+        ImplosionCoalOre = new OreBlock("imp-coal", Items.coal) {{
             playerUnmineable = true;
         }};
 
@@ -203,6 +203,7 @@ public class blocksMain {
         ItemTransporterJunction = new Junction("item-transporter-junction") {{
             health = 10;
             requirements(Category.distribution, with(ImplosionItems.silver, 3));
+            squareSprite = false;
         }};
 
         // Defense
